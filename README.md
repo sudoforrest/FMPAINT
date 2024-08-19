@@ -5,7 +5,7 @@
 <section id="hero-1946">
     <div class="cs-container">
         <div class="cs-content">
-            <h2 class="cs-title">Building Your Future Accommodation</h2>
+            <h2 class="cs-title">F&M Paint LLC</h2>
             <div class="cs-flex">
                 <p class="cs-text">We successfully cope with tasks of varying complexity, provide long-term guarantees and regularly master new technologies.</p>
                 <a href="" class="cs-button-solid">Read More</a>
