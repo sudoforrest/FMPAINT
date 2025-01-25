@@ -1,3 +1,149 @@
+/* General Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333333; /* Darker gray for better readability */
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    color: #252525; /* Improved contrast */
+}
+
+/* Links */
+a {
+    color: #0056b3; /* Darker blue for better readability */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #003580; /* Darker blue on hover */
+    text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+    color: #ffffff;
+    background-color: #d89a23; /* Improved contrast */
+    border-color: #b3751a;
+}
+
+.btn-primary:hover {
+    background-color: #b3751a; 
+    border-color: #8d5a14;
+}
+
+/* Navbar */
+nav.navbar {
+    background-color: #1a1a1a; /* Darker background for better contrast */
+    border-bottom: 3px solid #d89a23;
+}
+
+nav.navbar a {
+    color: #ffffff; /* White text for contrast */
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav.navbar a:hover {
+    color: #f0a500;
+}
+
+/* Hero Section */
+.hero-section {
+    background: url('../img/hero.jpg') no-repeat center center/cover;
+    color: #ffffff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Reviews Section */
+.review-text {
+    color: #444; /* Darker gray for contrast */
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Star Ratings */
+.review-stars {
+    font-size: 24px; /* Increase star size */
+    color: #ffcc00; /* Gold stars */
+}
+
+/* Contact Section */
+.contact-info {
+    color: #222222; /* Dark gray for visibility */
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #f0a500;
+}
+
+.contact-info a:hover {
+    color: #ffcc00;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a1a1a; /* Darker footer background */
+    color: #cccccc; /* Lighter gray text */
+    padding: 50px 0;
+}
+
+.footer a {
+    color: #f0a500; /* Gold color for better contrast */
+}
+
+.footer a:hover {
+    color: #ffcc00;
+}
+
+/* Google Map Embed */
+.map-responsive {
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+}
+
+.map-responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 36px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+    }
+
+    .review-text {
+        font-size: 16px;
+    }
+
+    .review-stars {
+        font-size: 20px; /* Adjust star size for mobile */
+    }
+}
 /******* Bootstrap Theming ********/
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
