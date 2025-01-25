@@ -18,7 +18,6 @@
         $(window).resize(toggleNavbarMethod);
     });
     
-    
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -31,7 +30,6 @@
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
-
 
     // Service carousel
     $(".service-carousel").owlCarousel({
@@ -60,7 +58,6 @@
         }
     });
 
-
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
@@ -73,7 +70,6 @@
 
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
-
 
     // Team carousel
     $(".team-carousel").owlCarousel({
@@ -102,7 +98,6 @@
         }
     });
 
-
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
@@ -116,6 +111,10 @@
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
         ]
     });
-    
-})(jQuery);
 
+    // Fix for uncrawlable Lightbox links
+    $(document).ready(function () {
+        $('.lb-cancel, .lb-close').attr('href', '#');
+    });
+
+})(jQuery);
