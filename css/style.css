@@ -1,42 +1,31 @@
 /* General Styles */
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #222222; /* Darkened for better contrast */
+    color: #333333; /* Darkened for better contrast */
     background-color: #ffffff;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #2c2c2c; /* Darkened for better contrast */
+    background-color: #343a40; /* Darkened for better contrast */
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: #f5f5f5; /* Lightened for contrast */
+    color: #ffffff; /* Lightened for contrast */
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-    color: #ffdd57; /* Improved hover visibility */
-}
-
-.navbar-brand h2 {
-    color: #ffcc00; /* Better contrast for branding */
-}
-
-/* Hero Section */
-.carousel-caption h1,
-.carousel-caption h2,
-.carousel-caption h3 {
-    color: #ffffff; /* Ensured readability */
+    color: #ffcc00; /* Enhanced hover visibility */
 }
 
 /* Buttons */
 .btn-primary {
-    background-color: #004085; /* Darker blue for better contrast */
-    border-color: #003060;
+    background-color: #004085; /* Improved contrast */
+    border-color: #002855;
 }
 
 .btn-primary:hover {
-    background-color: #002855;
+    background-color: #003060;
     border-color: #001d40;
 }
 
@@ -46,14 +35,21 @@ body {
     color: #ffffff;
 }
 
+/* Hero Section */
+.carousel-caption h1,
+.carousel-caption h2,
+.carousel-caption h3 {
+    color: #ffffff;
+}
+
 /* Sections */
 .bg-primary {
-    background-color: #002b5c; /* Darkened for contrast */
+    background-color: #002b5c; /* Adjusted contrast */
     color: #ffffff;
 }
 
 .bg-secondary {
-    background-color: #545b62; /* Adjusted contrast */
+    background-color: #6c757d; /* Darkened for contrast */
     color: #ffffff;
 }
 
@@ -63,36 +59,36 @@ body {
 }
 
 .bg-dark {
-    background-color: #2c2c2c;
+    background-color: #343a40;
     color: #ffffff;
-}
-
-/* Contact Info */
-.text-primary {
-    color: #003580; /* Enhanced contrast */
-}
-
-.text-secondary {
-    color: #545b62;
-}
-
-/* Testimonials */
-.testimonial-carousel .text-white {
-    color: #f8f9fa; /* Slightly lightened for readability */
 }
 
 /* Footer */
 .footer {
-    background-color: #2c2c2c;
+    background-color: #343a40;
     color: #ffffff;
 }
 
 .footer a {
-    color: #ffcc00; /* Better contrast for links */
+    color: #ffcc00;
 }
 
 .footer a:hover {
     color: #ffd700;
+}
+
+/* Links */
+a {
+    color: #004085;
+}
+
+a:hover {
+    color: #002855;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    color: #222222; /* Darker text for contrast */
 }
 
 /* Team Section */
@@ -104,28 +100,14 @@ body {
     color: #f8f9fa;
 }
 
-/* Map Section */
-.map-responsive iframe {
-    border: 2px solid #444444; /* Improved contrast */
-}
-
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    color: #222222; /* Darker text for contrast */
-}
-
-/* Links */
-a {
-    color: #003580; /* Improved contrast */
-}
-
-a:hover {
-    color: #002855;
-}
-
 /* Contact Section */
 .contact-info p {
-    color: #f8f9fa; /* Enhanced visibility */
+    color: #ffffff; /* Improved contrast */
+}
+
+/* Testimonials */
+.testimonial-carousel .text-white {
+    color: #f8f9fa;
 }
 
 /* Ensuring Buttons & Text Have Better Contrast */
@@ -147,7 +129,7 @@ a:hover {
     background-color: #004085;
 }
 
-/* Media Queries */
+/* Responsive Design Tweaks */
 @media (max-width: 768px) {
     .navbar-brand h2 {
         font-size: 1.5rem;
