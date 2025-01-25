@@ -58,34 +58,59 @@
     }
     </script>
 
-    <style>
+</script>
+
+<style>
     .carousel-inner {
         position: relative;
         width: 100%;
         overflow: hidden;
     }
+
     .carousel-item {
         position: relative;
         display: none;
         width: 100%;
         transition: transform 0.6s ease-in-out;
     }
+
     .carousel-item.active {
         display: block;
     }
+
     .carousel-control-prev, .carousel-control-next {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
     }
-.carousel-item img {
-    aspect-ratio: 1366 / 800; /* Maintain correct image aspect ratio */
-    object-fit: cover; /* Ensure images scale properly without distortion */
-    width: 100%;
-    height: auto;
-}
-        
+
+    .carousel-item img {
+        aspect-ratio: 1366 / 800; /* Maintain correct image aspect ratio */
+        object-fit: cover; /* Ensure images scale properly without distortion */
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ensure the carousel does not overlap elements */
+    #header-carousel {
+        position: relative;
+        z-index: 1; /* Keeps the carousel behind other elements */
+    }
+
+    /* Ensure the caption and button are clickable */
+    .carousel-caption {
+        position: relative;
+        z-index: 2; /* Brings the text and button above the images */
+    }
+
+    /* Fix overlapping issue of other elements */
+    nav.navbar {
+        position: relative;
+        z-index: 3; /* Ensures navbar stays on top */
+    }
+
 </style>
+
 
     <!-- Favicon -->
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
