@@ -543,6 +543,16 @@ fab fa-twitter"></i></a>
 
     <!-- Custom Template JS -->
     <script src="js/main.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const lazyImages = document.querySelectorAll("img[data-src]");
+        lazyImages.forEach(img => {
+            img.setAttribute("src", img.getAttribute("data-src"));
+            img.removeAttribute("data-src");
+        });
+    });
+</script>
+
 </body>
 
 </html>
