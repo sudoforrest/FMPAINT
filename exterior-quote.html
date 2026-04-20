@@ -45,6 +45,7 @@
     button { background:#f04e23; color:white; border:none; padding:12px 20px; border-radius:4px; cursor:pointer; }
     .footer { background:#2f2f2f; color:white; text-align:center; padding:20px; margin-top:40px; }
   </style>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -113,6 +114,7 @@
       <label>Project Details</label>
       <textarea name="message" rows="4" required></textarea>
 
+      <div class="cf-turnstile" data-sitekey="0x4AAAAAADAHwpd7cZKJjcN8"></div>
       <button type="submit">Send Request</button>
     </form>
   </div>
