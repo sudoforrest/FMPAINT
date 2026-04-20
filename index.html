@@ -6,20 +6,16 @@
   <title>F&M Paint | Premium Exterior Transformations</title>
   <meta name="description" content="F&M Paint delivers premium exterior transformations for homeowners who want a home they’re proud to pull into." />
   <!-- Favicon -->
-<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="img/site.webmanifest">
 
-<!-- PNG favicons -->
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-
-<!-- Apple (iPhone home screen) -->
-<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-
-<!-- Android / Chrome -->
-<link rel="manifest" href="img/site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --black: #0b0b0b;
@@ -334,7 +330,8 @@
 
     .services-grid,
     .process-grid,
-    .reasons-grid {
+    .reasons-grid,
+    .reviews-grid {
       display: grid;
       gap: 1rem;
       margin-top: 2rem;
@@ -352,9 +349,14 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
+    .reviews-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     .service-card,
     .process-card,
-    .reason-card {
+    .reason-card,
+    .review-card {
       background: white;
       border: 1px solid var(--border-dark);
       border-radius: 22px;
@@ -418,6 +420,60 @@
       justify-content: center;
     }
 
+    .owners-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+
+    .owner-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .owner-photo-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .owner-photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .owner-photo-card div {
+      padding: 0.9rem 1rem 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .stars {
+      color: var(--red);
+      letter-spacing: 0.08em;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .review-card p {
+      color: var(--text);
+      font-size: 0.98rem;
+    }
+
+    .review-meta {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
     .alt {
       background: var(--warm-white);
     }
@@ -432,7 +488,6 @@
       color: rgba(255,255,255,0.8);
     }
 
-    /* Fix process text visibility */
     .process-content h3 {
       color: #1f1f1f;
     }
@@ -519,6 +574,7 @@
     @media (max-width: 1080px) {
       .hero-grid,
       .split-grid,
+      .owners-grid,
       .cta-box,
       .pricing-box {
         grid-template-columns: 1fr;
@@ -526,7 +582,8 @@
 
       .trust-grid,
       .services-grid,
-      .process-grid {
+      .process-grid,
+      .reviews-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -558,7 +615,13 @@
       .gallery-grid,
       .services-grid,
       .process-grid,
-      .reasons-grid {
+      .reasons-grid,
+      .reviews-grid,
+      .owner-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .owners-grid {
         grid-template-columns: 1fr;
       }
 
@@ -587,6 +650,7 @@
         <a href="#transformations">Transformations</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
+        <a href="#owners">Owners</a>
         <a href="#quote">Get Quote</a>
       </nav>
     </div>
@@ -625,6 +689,8 @@
         <div class="trust-item">Premium Sherwin-Williams Materials</div>
       </div>
     </section>
+
+    
 
     <section class="section">
       <div class="container split-grid">
@@ -777,6 +843,66 @@
               <h3>Final Walkthrough</h3>
               <p>We review the completed work with you and make sure the finished result meets the standard we promised.</p>
             </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="owners">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Meet the owners</span>
+        <h2>The People Behind F&amp;M Paint</h2>
+        <p class="section-lead">Veteran and family owned, focused on quality, communication, and results homeowners feel proud to come home to.</p>
+
+        <div class="owners-grid">
+          <div class="owner-photos">
+            <article class="owner-photo-card">
+              <img src="img/forrest.jpg" alt="Forrest from F&amp;M Paint" />
+              <div>Forrest</div>
+            </article>
+            <article class="owner-photo-card">
+              <img src="img/maribel.jpg" alt="Maribel from F&amp;M Paint" />
+              <div>Maribel</div>
+            </article>
+          </div>
+
+          <div class="card">
+            <h3>Built on craftsmanship, not shortcuts</h3>
+            <p>F&amp;M Paint is a family-run business built around one simple idea — your home deserves more than a rushed paint job.</p>
+            <p>We’re not a “get in and get out” crew. We take the time required to get the result right, because we know how much your home matters.</p>
+            <p>With years of hands-on experience and a background rooted in craftsmanship, we focus on the details that most painters skip — proper prep, clean lines, and a finished result that actually feels complete.</p>
+            <p>As a husband-and-wife team, we are directly involved in every step of the process — from the initial walkthrough to the final result. You’re not being handed off to a crew or left wondering who’s in charge.</p>
+            <p>We stay on-site, communicate clearly, and make sure everything is done to the standard we would expect for our own home.</p>
+            <p>We treat every home like it’s our own — and we care about the final result just as much as you do.</p>
+            <p><strong>You’ll work directly with us from the first walkthrough to the final walkthrough.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> What homeowners are saying</span>
+        <h2>Trusted by Homeowners Across the OKC Area</h2>
+        <p class="section-lead">The best proof is how homeowners feel after the job is done.</p>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>From start to finish, F&amp;M was professional, punctual, and easy to work with. The paint job turned out beautifully, the property was treated with respect, and communication stayed strong throughout the project.</p>
+            <div class="review-meta">Travis M.</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>The crew was respectful, careful with the home, and produced high-quality work with strong attention to detail. It was a smooth experience from beginning to end, with results that felt worth every bit of the investment.</p>
+            <div class="review-meta">Jason W.</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Homeowners noticed the responsiveness, detailed quote, careful masking, strong caulking, and clean finish. The team worked efficiently without cutting corners and delivered a polished, high-quality final result.</p>
+            <div class="review-meta">Dusty S.</div>
           </article>
         </div>
       </div>
