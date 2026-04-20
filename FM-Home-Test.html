@@ -357,17 +357,40 @@
       margin-bottom: 0.6rem;
     }
 
+    .process-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .process-image-wrap {
+      position: relative;
+    }
+
+    .process-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      display: block;
+    }
+
+    .process-content {
+      padding: 1.35rem;
+    }
+
     .process-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: rgba(214,69,47,0.1);
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(6px);
       color: var(--red);
       font-weight: 800;
-      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .alt {
@@ -519,7 +542,7 @@
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand">
-        <img src="images/logo-mark.png" alt="F&M Paint logo" class="brand-mark" />
+        <img src="img/logo-mark.png" alt="F&M Paint logo" class="brand-mark" />
         <div class="brand-text">
           <span class="brand-name">F&amp;M Paint</span>
           <span class="brand-sub">Veteran &amp; Family Owned</span>
@@ -550,7 +573,7 @@
         </div>
 
         <div class="hero-card">
-          <img src="images/hero-home.jpg" alt="Beautiful finished exterior painted by F&M Paint" class="hero-image" />
+          <img src="img/hero-home.jpg" alt="Beautiful finished exterior painted by F&M Paint" class="hero-image" />
           <div class="hero-badge">
             <strong>Built for homeowners who want it done right</strong>
             From consultation to final walkthrough, we help you get to the finished result with confidence.
@@ -595,15 +618,15 @@
 
         <div class="gallery-grid">
           <article class="gallery-item">
-            <img src="images/transformation-1.jpg" alt="Exterior transformation by F&M Paint" />
+            <img src="img/transformation-1.jpg" alt="Exterior transformation by F&M Paint" />
             <div class="gallery-caption">Before and after transformation with full prep, premium coatings, and a clean finished look.</div>
           </article>
           <article class="gallery-item">
-            <img src="images/transformation-2.jpg" alt="Freshly painted house exterior by F&M Paint" />
+            <img src="img/transformation-2.jpg" alt="Freshly painted house exterior by F&M Paint" />
             <div class="gallery-caption">A polished exterior result that helps the home feel complete, intentional, and elevated.</div>
           </article>
           <article class="gallery-item">
-            <img src="images/transformation-3.jpg" alt="Completed premium exterior paint project" />
+            <img src="img/transformation-3.jpg" alt="Completed premium exterior paint project" />
             <div class="gallery-caption">Exterior work guided from consultation to final walkthrough with attention to every detail.</div>
           </article>
         </div>
@@ -657,7 +680,71 @@
 
         <div class="process-grid">
           <article class="process-card">
-            <div class="process-number">1</div>
+            <div class="process-image-wrap">
+              <img src="img/process-pressure-washing.jpg" alt="Pressure washing exterior before painting" class="process-image" />
+              <div class="process-number">1</div>
+            </div>
+            <div class="process-content">
+              <h3>Consultation</h3>
+              <p>We walk the property with you, understand what the home needs, and identify the right path forward.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-scraping-prep.jpg" alt="Scraping and prep work before exterior painting" class="process-image" />
+              <div class="process-number">2</div>
+            </div>
+            <div class="process-content">
+              <h3>Surface Prep</h3>
+              <p>Scraping, sanding, and preparing surfaces to create the right foundation for a lasting finish.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-caulking-trim.jpg" alt="Caulking and trim preparation" class="process-image" />
+              <div class="process-number">3</div>
+            </div>
+            <div class="process-content">
+              <h3>Caulking &amp; Sealing</h3>
+              <p>Sealing gaps and trim to improve appearance and protect the home before paint is applied.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-masking-prep.jpg" alt="Masking and protecting surfaces before painting" class="process-image" />
+              <div class="process-number">4</div>
+            </div>
+            <div class="process-content">
+              <h3>Masking &amp; Protection</h3>
+              <p>Careful masking to protect surfaces and ensure clean, professional paint lines.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-spraying-paint.jpg" alt="Spraying exterior paint" class="process-image" />
+              <div class="process-number">5</div>
+            </div>
+            <div class="process-content">
+              <h3>Paint Application</h3>
+              <p>Even, professional application using premium Sherwin-Williams systems for a durable finish.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-final-walkthrough.jpg" alt="Final walkthrough of completed project" class="process-image" />
+              <div class="process-number">6</div>
+            </div>
+            <div class="process-content">
+              <h3>Final Walkthrough</h3>
+              <p>We review everything with you to ensure the finished result meets our standard and your expectations.</p>
+            </div>
+          </article>
+        </div>
             <h3>On-Site Consultation</h3>
             <p>We walk the property with you, understand what the home needs, and identify the right path forward.</p>
           </article>
