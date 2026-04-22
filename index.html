@@ -5,13 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>F&M Paint | Premium Exterior Transformations</title>
   <meta name="description" content="F&M Paint delivers premium exterior transformations for homeowners who want a home they’re proud to pull into." />
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
   <link rel="manifest" href="img/site.webmanifest">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -52,9 +50,7 @@
       margin: 0 auto;
     }
 
-    .section {
-      padding: 4.5rem 0;
-    }
+    .section { padding: 4.5rem 0; }
 
     .eyebrow {
       display: inline-flex;
@@ -86,10 +82,7 @@
     h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
     h3 { font-size: clamp(1.25rem, 3vw, 1.7rem); }
 
-    p {
-      margin: 0 0 1rem;
-      font-size: 1rem;
-    }
+    p { margin: 0 0 1rem; font-size: 1rem; }
 
     .lead {
       font-size: clamp(1.05rem, 2.1vw, 1.2rem);
@@ -128,6 +121,12 @@
       background: rgba(255,255,255,0.04);
     }
 
+    .btn-outline {
+      border: 1px solid rgba(0,0,0,0.12);
+      color: var(--text);
+      background: white;
+    }
+
     .site-header {
       position: sticky;
       top: 0;
@@ -162,9 +161,7 @@
       padding: 0.22rem;
     }
 
-    .brand-text {
-      min-width: 0;
-    }
+    .brand-text { min-width: 0; }
 
     .brand-name {
       display: block;
@@ -210,9 +207,7 @@
       align-items: center;
     }
 
-    .hero-copy {
-      padding: 1rem 0;
-    }
+    .hero-copy { padding: 1rem 0; }
 
     .hero-actions {
       display: flex;
@@ -331,32 +326,24 @@
     .services-grid,
     .process-grid,
     .reasons-grid,
-    .reviews-grid {
+    .reviews-grid,
+    .faq-grid {
       display: grid;
       gap: 1rem;
       margin-top: 2rem;
     }
 
-    .services-grid {
-      grid-template-columns: repeat(5, 1fr);
-    }
-
-    .process-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-
-    .reasons-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .reviews-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .services-grid { grid-template-columns: repeat(5, 1fr); }
+    .process-grid { grid-template-columns: repeat(3, 1fr); }
+    .reasons-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    .faq-grid { grid-template-columns: repeat(2, 1fr); }
 
     .service-card,
     .process-card,
     .reason-card,
-    .review-card {
+    .review-card,
+    .faq-card {
       background: white;
       border: 1px solid var(--border-dark);
       border-radius: 22px;
@@ -366,7 +353,8 @@
 
     .service-card h3,
     .process-card h3,
-    .reason-card h3 {
+    .reason-card h3,
+    .faq-card h3 {
       font-size: 1.2rem;
       margin-bottom: 0.6rem;
     }
@@ -376,9 +364,7 @@
       padding: 0;
     }
 
-    .process-image-wrap {
-      position: relative;
-    }
+    .process-image-wrap { position: relative; }
 
     .process-image {
       width: 100%;
@@ -400,9 +386,7 @@
       letter-spacing: 0.01em;
     }
 
-    .process-content {
-      padding: 1.35rem;
-    }
+    .process-content { padding: 1.35rem; }
 
     .process-number {
       position: absolute;
@@ -462,10 +446,8 @@
       margin-bottom: 0.75rem;
     }
 
-    .review-card p {
-      color: var(--text);
-      font-size: 0.98rem;
-    }
+    .review-card p,
+    .faq-card p { color: var(--text); font-size: 0.98rem; }
 
     .review-meta {
       margin-top: 1rem;
@@ -474,9 +456,7 @@
       font-size: 0.9rem;
     }
 
-    .alt {
-      background: var(--warm-white);
-    }
+    .alt { background: var(--warm-white); }
 
     .dark-section {
       background: var(--black);
@@ -484,17 +464,10 @@
     }
 
     .dark-section .section-lead,
-    .dark-section p {
-      color: rgba(255,255,255,0.8);
-    }
+    .dark-section p { color: rgba(255,255,255,0.8); }
 
-    .process-content h3 {
-      color: #1f1f1f;
-    }
-
-    .process-content p {
-      color: #5a5a5a;
-    }
+    .process-content h3 { color: #1f1f1f; }
+    .process-content p { color: #5a5a5a; }
 
     .pricing-box {
       display: grid;
@@ -556,16 +529,44 @@
       align-items: center;
     }
 
+    .footer-left p,
+    .footer-right p {
+      margin: 0.2rem 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .footer-phone {
+      color: white;
+      font-weight: 700;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      color: white;
+      opacity: 0.85;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
     .sticky-cta {
-      position: fixed;
+      position: fixed !important;
       left: 0;
       right: 0;
       bottom: 0;
-      z-index: 999;
+      z-index: 9999;
       display: none;
+      width: 100%;
+      transform: translateZ(0);
       padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
       background: rgba(11,11,11,0.92);
       backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border-top: 1px solid rgba(255,255,255,0.08);
     }
 
@@ -583,33 +584,25 @@
       .trust-grid,
       .services-grid,
       .process-grid,
-      .reviews-grid {
+      .reviews-grid,
+      .faq-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 760px) {
+      body { padding-bottom: 108px; }
       .section { padding: 3.6rem 0; }
 
-      .nav-links {
-        display: none;
-      }
+      .nav-links { display: none; }
 
-      .hero {
-        padding-top: 4rem;
-      }
+      .hero { padding-top: 4rem; }
 
-      .hero-actions {
-        flex-direction: column;
-      }
+      .hero-actions { flex-direction: column; }
 
-      .hero-actions .btn {
-        width: 100%;
-      }
+      .hero-actions .btn { width: 100%; }
 
       .trust-grid,
       .gallery-grid,
@@ -617,20 +610,20 @@
       .process-grid,
       .reasons-grid,
       .reviews-grid,
+      .faq-grid,
       .owner-photos {
         grid-template-columns: 1fr;
       }
 
-      .owners-grid {
-        grid-template-columns: 1fr;
-      }
+      .owners-grid { grid-template-columns: 1fr; }
 
-      .hero-badge {
-        max-width: calc(100% - 2rem);
-      }
+      .hero-badge { max-width: calc(100% - 2rem); }
 
-      .sticky-cta {
-        display: block;
+      .sticky-cta { display: block; }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -651,6 +644,7 @@
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#owners">Owners</a>
+        <a href="#faq">FAQ</a>
         <a href="#quote">Get Quote</a>
       </nav>
     </div>
@@ -665,7 +659,7 @@
           <p class="lead">Full exterior transformations for homeowners who want it done right — clean, professional, and built to last.</p>
           <div class="hero-actions">
             <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
-            <a href="#transformations" class="btn btn-secondary">See Transformations</a>
+            <a href="tel:+14056977828" class="btn btn-secondary">Call (405) 697-7828</a>
           </div>
           <p class="hero-meta">Veteran &amp; family owned • Sherwin-Williams systems • Exterior-focused specialists</p>
         </div>
@@ -689,8 +683,6 @@
         <div class="trust-item">Premium Sherwin-Williams Materials</div>
       </div>
     </section>
-
-    
 
     <section class="section">
       <div class="container split-grid">
@@ -901,8 +893,58 @@
 
           <article class="review-card">
             <div class="stars">★★★★★</div>
-            <p>Homeowners noticed the responsiveness, detailed quote, careful masking, strong caulking, and clean finish. The team worked efficiently without cutting corners and delivered a polished, high-quality final result.</p>
+            <p>Great communication from the start and the quote was detailed and easy to understand. They took the time to prep everything right, paid attention to the details, and the final result came out really clean. You can tell they care about doing it the right way.</p>
             <div class="review-meta">Dusty S.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Common questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-lead">A few quick answers to help you understand how we work before we ever step on site.</p>
+
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>What exterior surfaces do you paint?</h3>
+            <p>We work with a wide range of exterior surfaces, including wood, siding, trim, stucco, brick, and metal. During the initial walkthrough, we evaluate each surface and build the right approach to ensure the finished result looks clean and lasts.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you help with color selection?</h3>
+            <p>Yes. We offer guidance and can connect you with color consultants to help you feel confident in your choices. Our goal is to make sure the final look fits your home and your vision before any work begins.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>What paint do you use?</h3>
+            <p>We use premium Sherwin-Williams products and select the right system based on your home’s materials and condition. We typically offer good, better, and best options so you can choose the level of durability and long-term performance that fits your goals.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you handle repairs before painting?</h3>
+            <p>Yes, when needed. During the walkthrough, we identify any areas that may require repair and discuss the best way to address them before painting begins so the final result looks complete.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>How long does a typical exterior project take?</h3>
+            <p>Most exterior projects take 2–5 days depending on the size and complexity. We prioritize doing the work correctly and maintaining a clean, organized job site each day.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you require a deposit?</h3>
+            <p>For most projects, we require a 50% deposit to secure your spot on the schedule, with the remaining balance due upon completion. Larger projects may follow a custom payment structure depending on scope.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you offer gutters, siding, windows, or doors?</h3>
+            <p>Yes. We can coordinate gutters, siding, windows, and doors through trusted partners so your entire exterior project comes together the right way.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Can I call instead of filling out the form?</h3>
+            <p>Absolutely. You can call us directly at <a href="tel:+14056977828" style="color: var(--red); font-weight: 700;">(405) 697-7828</a> if you prefer to talk through your project instead of submitting a form.</p>
           </article>
         </div>
       </div>
@@ -961,7 +1003,10 @@
           <div class="cta-panel">
             <h3>Request your exterior quote</h3>
             <p>Tell us a little about your home and project goals. From there, we’ll reach out and schedule the next step.</p>
-            <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+              <a href="tel:+14056977828" class="btn btn-outline">Call (405) 697-7828</a>
+            </div>
           </div>
         </div>
       </div>
@@ -970,8 +1015,22 @@
 
   <footer class="site-footer">
     <div class="container footer-row">
-      <div>F&amp;M Paint — Veteran &amp; Family Owned</div>
-      <div>Serving Piedmont, OK and surrounding areas</div>
+      <div class="footer-left">
+        <p><strong style="color:white;">F&amp;M Paint — Veteran &amp; Family Owned</strong></p>
+        <p>Serving Piedmont, OK and surrounding areas</p>
+        <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+        <p>Sat: By appointment</p>
+        <p>Sun: Closed</p>
+      </div>
+
+      <div class="footer-right">
+        <p><a class="footer-phone" href="tel:+14056977828">(405) 697-7828</a></p>
+        <p><a href="mailto:fmpaintokc@gmail.com" style="color:white;">fmpaintokc@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
     </div>
   </footer>
 
