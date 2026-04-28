@@ -1,356 +1,1070 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VGB5GLSW6M"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F&M Paint | Premium Exterior Transformations</title>
+  <meta name="description" content="F&M Paint delivers premium exterior transformations for homeowners who want a home they’re proud to pull into." />
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --charcoal: #171717;
+      --warm-white: #f4f1ec;
+      --soft-white: #fbfaf7;
+      --red: #d6452f;
+      --coral: #e8a39a;
+      --green: #2f4a34;
+      --text: #1f1f1f;
+      --muted: #6b6b6b;
+      --border: rgba(255,255,255,0.12);
+      --border-dark: rgba(0,0,0,0.1);
+      --shadow: 0 18px 50px rgba(0,0,0,0.14);
+      --radius: 24px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--soft-white);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin: 0 auto;
+    }
+
+    .section { padding: 4.5rem 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      display: inline-block;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 1rem;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.7rem, 7vw, 5.5rem); }
+    h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.7rem); }
+
+    p { margin: 0 0 1rem; font-size: 1rem; }
+
+    .lead {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      max-width: 40rem;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 42rem;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 10px 25px rgba(214,69,47,0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(0,0,0,0.12);
+      color: var(--text);
+      background: white;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      color: white;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      padding: 0.22rem;
+    }
+
+    .brand-text { min-width: 0; }
+
+    .brand-name {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.66);
+      margin-top: 0.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(232,163,154,0.14), transparent 28%),
+        radial-gradient(circle at 10% 20%, rgba(214,69,47,0.16), transparent 22%),
+        linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
+      color: white;
+      padding: 5.2rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy { padding: 1rem 0; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.75rem;
+    }
+
+    .hero-meta {
+      margin-top: 1.35rem;
+      color: rgba(255,255,255,0.74);
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .hero-badge {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      background: rgba(11,11,11,0.84);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 0.95rem 1rem;
+      max-width: 75%;
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .trust-strip {
+      background: var(--black);
+      color: white;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      padding: 1.2rem 0;
+    }
+
+    .trust-item {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+    }
+
+    .quote-card {
+      background: #fffaf8;
+      border-color: rgba(214,69,47,0.12);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .gallery-caption {
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .services-grid,
+    .process-grid,
+    .reasons-grid,
+    .reviews-grid,
+    .faq-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .services-grid { grid-template-columns: repeat(5, 1fr); }
+    .process-grid { grid-template-columns: repeat(3, 1fr); }
+    .reasons-grid { grid-template-columns: repeat(2, 1fr); }
+    .reviews-grid { grid-template-columns: repeat(3, 1fr); }
+    .faq-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .service-card,
+    .process-card,
+    .reason-card,
+    .review-card,
+    .faq-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: 22px;
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card h3,
+    .process-card h3,
+    .reason-card h3,
+    .faq-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .process-card {
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .process-image-wrap { position: relative; }
+
+    .process-image {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .process-placeholder {
+      aspect-ratio: 3 / 4;
+      display: flex;
+      align-items: end;
+      justify-content: start;
+      padding: 1.25rem;
+      background: linear-gradient(180deg, rgba(232,163,154,0.18), rgba(255,255,255,0.04)), linear-gradient(135deg, #2a2a2a, #111111);
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    .process-content { padding: 1.35rem; }
+
+    .process-number {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(6px);
+      color: var(--red);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .owners-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+      align-items: start;
+    }
+
+    .owner-photos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    .owner-photo-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .owner-photo-card img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .owner-photo-card div {
+      padding: 0.9rem 1rem 1rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .stars {
+      color: var(--red);
+      letter-spacing: 0.08em;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .review-card p,
+    .faq-card p { color: var(--text); font-size: 0.98rem; }
+
+    .review-meta {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .alt { background: var(--warm-white); }
+
+    .dark-section {
+      background: var(--black);
+      color: white;
+    }
+
+    .dark-section .section-lead,
+    .dark-section p { color: rgba(255,255,255,0.8); }
+
+    .process-content h3 { color: #1f1f1f; }
+    .process-content p { color: #5a5a5a; }
+
+    .pricing-box {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+      align-items: stretch;
+    }
+
+    .pricing-main,
+    .pricing-side {
+      border-radius: 24px;
+      padding: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .pricing-side {
+      background: rgba(214,69,47,0.12);
+      border-color: rgba(214,69,47,0.22);
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items: center;
+      background: linear-gradient(180deg, #171717, #0b0b0b);
+      color: white;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.8);
+      max-width: 36rem;
+    }
+
+    .cta-panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 1.4rem;
+    }
+
+    .site-footer {
+      background: #090909;
+      color: rgba(255,255,255,0.72);
+      padding: 2rem 0 6rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-left p,
+    .footer-right p {
+      margin: 0.2rem 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .footer-phone {
+      color: white;
+      font-weight: 700;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      color: white;
+      opacity: 0.85;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
+    .sticky-cta {
+      position: fixed !important;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      display: none;
+      width: 100%;
+      transform: translateZ(0);
+      padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .sticky-cta .btn { width: 100%; }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .split-grid,
+      .owners-grid,
+      .cta-box,
+      .pricing-box {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .process-grid,
+      .reviews-grid,
+      .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 760px) {
+      body { padding-bottom: 108px; }
+      .section { padding: 3.6rem 0; }
+
+      .nav-links { display: none; }
+
+      .hero { padding-top: 4rem; }
+
+      .hero-actions { flex-direction: column; }
+
+      .hero-actions .btn { width: 100%; }
+
+      .trust-grid,
+      .gallery-grid,
+      .services-grid,
+      .process-grid,
+      .reasons-grid,
+      .reviews-grid,
+      .faq-grid,
+      .owner-photos {
+        grid-template-columns: 1fr;
+      }
+
+      .owners-grid { grid-template-columns: 1fr; }
+
+      .hero-badge { max-width: calc(100% - 2rem); }
+
+      .sticky-cta { display: block; }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+<!-- Meta Pixel Code -->
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VGB5GLSW6M');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1527791345730092');
+fbq('track', 'PageView');
 </script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 
-    <meta charset="utf-8">
-    <title>F&M Paint LLC - House Painting Services</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="House Painting Services in Piedmont, Oklahoma" name="keywords">
-    <meta content="Professional house painting services provided by F&M Paint LLC in Piedmont, Oklahoma" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;600&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <!-- Flaticon Font -->
-    <link href="lib/flaticon/font/flaticon.css" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
 </head>
-
 <body>
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-dark py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white pr-3" href="">FAQs</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white px-3" href="">Help</a>
-                        <span class="text-white">|</span>
-                        <a class="text-white pl-3" href="">Support</a>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center text-lg-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="text-white px-3" href="">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <img src="img/logo-mark.png" alt="F&M Paint logo" class="brand-mark" />
+        <div class="brand-text">
+          <span class="brand-name">F&amp;M Paint</span>
+          <span class="brand-sub">Veteran &amp; Family Owned</span>
         </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#transformations">Transformations</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#owners">Owners</a>
+        <a href="#faq">FAQ</a>
+        <a href="#quote">Get Quote</a>
+      </nav>
     </div>
-    <!-- Topbar End -->
+  </header>
 
-
-    <!-- Navbar Start -->
-    <div class="container-fluid position-relative nav-bar p-0">
-        <div class="container position-relative" style="z-index: 9;">
-            <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
-                <a href="" class="navbar-brand">
-                    <h1 class="m-0 display-5 text-white"><span class="text-primary">F&M</span> PAINT</h1>
-                </a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto py-0">
-                        <a href="https://fmpaintokc.com/" class="nav-item nav-link active" title="F&M Paint LLC Home">Home</a>
-                        <a href="https://fmpaintokc.com/about" class="nav-item nav-link" title="About F&M Paint LLC">About</a>
-                        <a href="https://fmpaintokc.com/services" class="nav-item nav-link" title="Our House Painting Services">Services</a>
-                        <a href="https://fmpaintokc.com/projects" class="nav-item nav-link" title="Our Painting Projects">Projects</a>
-                        <a href="https://fmpaintokc.com/process" class="nav-item nav-link active" title="Our Painting Process">Process</a>
-                        <a href="https://fmpaintokc.com/contact" class="nav-item nav-link" title="Contact F&M Paint LLC">Contact</a>
-
-                    </div>
-                </div>
-            </nav>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Premium Exterior Transformations</span>
+          <h1>We Don’t Just Paint Homes — We Guide You to a Home You’re Proud Of</h1>
+          <p class="lead">Full exterior transformations for homeowners who want it done right — clean, professional, and built to last.</p>
+          <div class="hero-actions">
+            <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+            <a href="tel:+14056977828" class="btn btn-secondary">Call (405) 697-7828</a>
+          </div>
+          <p class="hero-meta">Veteran &amp; family owned • Sherwin-Williams systems • Exterior-focused specialists</p>
         </div>
-    </div>
-    <!-- Navbar End -->
 
-
-    <!-- Under Nav Start -->
-    <div class="container-fluid bg-white py-3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 text-left mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-office font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Our Office</h5>
-                            <p class="m-0">3343 Washington Ave East, Piedmont, OK</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-center mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-email font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Email Us</h5>
-                            <p class="m-0"><a href="mailto:fmpaintokc@gmail.com" style="color: #777777;">fmpaintokc@gmail.com</a></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-left text-lg-right mb-3 mb-lg-0">
-                    <div class="d-inline-flex text-left">
-                        <h1 class="flaticon-telephone font-weight-normal text-primary m-0 mr-3"></h1>
-                        <div class="d-flex flex-column">
-                            <h5>Call Us</h5>
-                            <p class="m-0">(405) 697-7828</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-card">
+          <img src="img/hero-home.jpg" alt="Beautiful finished exterior painted by F&M Paint" class="hero-image" />
+          <div class="hero-badge">
+            <strong>Built for homeowners who want it done right</strong>
+            From consultation to final walkthrough, we help you get to the finished result with confidence.
+          </div>
         </div>
-    </div>
-    <!-- Under Nav End -->
+      </div>
+    </section>
 
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">Veteran &amp; Family Owned</div>
+        <div class="trust-item">Exterior-Focused Specialists</div>
+        <div class="trust-item">Clean Job Sites Every Day</div>
+        <div class="trust-item">Clear Communication</div>
+        <div class="trust-item">Premium Sherwin-Williams Materials</div>
+      </div>
+    </section>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid bg-secondary py-5">
-        <div class="container py-5">
-            <div class="row align-items-center py-4">
-                <div class="col-md-6 text-center text-md-left">
-                    <h1 class="mb-4 mb-md-0 text-primary text-uppercase">About Us</h1>
-                </div>
-                <div class="col-md-6 text-center text-md-right">
-                    <div class="d-inline-flex align-items-center">
-                        <a class="btn btn-outline-primary" href="">Home</a>
-                        <i class="fas fa-angle-double-right text-primary mx-2"></i>
-                        <a class="btn btn-outline-primary disabled" href="">About Us</a>
-                    </div>
-                </div>
-            </div>
+    <section class="section">
+      <div class="container split-grid">
+        <div>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Why homeowners choose us</span>
+          <h2>Your Home Should Feel Finished, Intentional, and Worth Coming Home To</h2>
+          <p class="section-lead">You don’t just want your home painted. You want to pull into your driveway and feel proud of it.</p>
+          <p>Whether your home feels faded, unfinished, worn down, or simply not what you envisioned, we help bring it to life with a clear process and a professional standard from start to finish.</p>
+          <p>We guide you through the transformation — from the first walkthrough and color decisions to the prep, the details, and the final result — so the home you imagine is the home you come back to.</p>
         </div>
-    </div>
-    <!-- Page Header Start -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center bg-primary h-100 py-5 px-3">
-                        <i class="flaticon-brickwall display-1 font-weight-normal text-secondary mb-3"></i>
-                        <h4 class="display-3 mb-3">10+</h4>
-                        <h1 class="m-0">Years Experience</h1>
-                    </div>
-                </div>
-                <div class="col-lg-7 m-0 my-lg-5 pt-5 pb-5 pb-lg-2 pl-lg-5">
-                    <h6 class="text-primary font-weight-normal text-uppercase mb-3">Learn About Us</h6>
-                    <h1 class="mb-4 section-title">We Are The Best House Painting Company In Piedmont, OK</h1>
-                    <p>We provide professional and high-quality house painting services, ensuring that your home looks its best. Whether it's interior or exterior painting, our team is dedicated to delivering exceptional results that meet your expectations.</p>
-                    <div class="row py-2">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center mb-4">
-                                <h1 class="flaticon-house font-weight-normal text-primary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Project Planning</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center mb-4">
-                                <h1 class="flaticon-stairs font-weight-normal text-primary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Exterior & Interior Painting</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center
-
- mb-4">
-                                <h1 class="flaticon-office font-weight-normal text-primary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Commercial Projects</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center mb-4">
-                                <h1 class="flaticon-living-room font-weight-normal text-primary m-0 mr-3"></h1>
-                                <h5 class="text-truncate m-0">Residential Projects</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="card quote-card">
+          <h3>What working with F&amp;M feels like</h3>
+          <p>Clear communication. Thoughtful guidance. A clean job site. Premium materials. A team that cares about the final result as much as you do.</p>
+          <p>We’re here to help you make confident decisions and carry the project over the finish line the right way.</p>
         </div>
-    </div>
-    <!-- About End -->
+      </div>
+    </section>
 
+    <section class="section alt" id="transformations">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Real transformations</span>
+        <h2>Real Homes. Real Exterior Transformations.</h2>
+        <p class="section-lead">We specialize in turning worn-out or incomplete exteriors into clean, finished homes that stand out for the right reasons.</p>
 
-    <!-- Features Start -->
-    <div class="container-fluid bg-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 mt-5 py-5 pr-lg-5">
-                    <h6 class="text-primary font-weight-normal text-uppercase mb-3">Why Choose Us?</h6>
-                    <h1 class="mb-4 section-title">10+ Years Experience In The House Painting Industry</h1>
-                    <p class="mb-4">With over a decade of experience, F&M Paint LLC has established itself as a trusted provider of house painting services in Piedmont, OK. We focus on delivering quality work and ensuring customer satisfaction in every project.</p>
-                    <ul class="list-inline">
-                        <li><h5><i class="far fa-check-square text-primary mr-3"></i>10+ Years Experience</h5></li>
-                        <li><h5><i class="far fa-check-square text-primary mr-3"></i>Best House Painting Services</h5></li>
-                        <li><h5><i class="far fa-check-square text-primary mr-3"></i>Customer Satisfaction</h5></li>
-                    </ul>
-                    <a href="" class="btn btn-primary mt-3 py-2 px-4">View More</a>
-                </div>
-                <div class="col-lg-5">
-                    <div class="d-flex flex-column align-items-center justify-content-center h-100 overflow-hidden">
-                        <img class="h-100" src="img/feature.jpg" alt="">
-                    </div>
-                </div>
-            </div>
+        <div class="gallery-grid">
+          <article class="gallery-item">
+            <img src="img/transformation-1.jpg" alt="Exterior transformation by F&M Paint" />
+            <div class="gallery-caption">Before and after transformation with full prep, premium coatings, and a clean finished look.</div>
+          </article>
+          <article class="gallery-item">
+            <img src="img/transformation-2.jpg" alt="Freshly painted house exterior by F&M Paint" />
+            <div class="gallery-caption">A polished exterior result that helps the home feel complete, intentional, and elevated.</div>
+          </article>
+          <article class="gallery-item">
+            <img src="img/transformation-3.jpg" alt="Completed premium exterior paint project" />
+            <div class="gallery-caption">Exterior work guided from consultation to final walkthrough with attention to every detail.</div>
+          </article>
         </div>
-    </div>
-    <!-- Features End -->
+      </div>
+    </section>
 
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Exterior-focused services</span>
+        <h2>Everything Needed to Properly Transform Your Home’s Exterior</h2>
+        <p class="section-lead">We do more than apply paint. We build the process around the finished result you actually want.</p>
 
-    <!-- Team Start -->
-    <div class="container-fluid bg-light">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="py-5 px-4 h-100 bg-primary d-flex flex-column align-items-center justify-content-center">
-                        <h6 class="text-white font-weight-normal text-uppercase mb-3">Our Team</h6>
-                        <h1 class="mb-0 text-center">Meet Our Team Members</h1>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-6 p-0 py-sm-5">
-                    <div class="owl-carousel team-carousel position-relative p-0 py-sm-5">
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/forrest.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Forrest</h5>
-                                <p class="m-0">Owner</p>
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/maribel.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Maribel</h5>
-                                <p class="m-0">Owner</p>
-                            </div>
-                        </div>
-                        <div class="team d-flex flex-column text-center mx-3">
-                            <div class="position-relative">
-                                <img class="img-fluid w-100" src="img/jahir.jpg" alt="">
-                                <div class="team-social d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-outline-primary text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-outline-primary text-center px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column bg-secondary text-center py-3">
-                                <h5 class="text-white">Jahir</h5>
-                                <p class="m-0">Painter</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Exterior Painting</h3>
+            <p>Professional exterior painting designed around clean results, long-term durability, and a home you’re proud to own.</p>
+          </article>
+          <article class="service-card">
+            <h3>Surface Prep &amp; Repairs</h3>
+            <p>Washing, scraping, sanding, spot repairs, and preparation work that creates the right foundation for a lasting finish.</p>
+          </article>
+          <article class="service-card">
+            <h3>Caulking &amp; Sealing</h3>
+            <p>Proper sealing where needed to improve appearance, protect vulnerable areas, and support the performance of the system.</p>
+          </article>
+          <article class="service-card">
+            <h3>Siding Coordination</h3>
+            <p>When exterior improvements go beyond paint, we can coordinate siding replacement through trusted trade partners.</p>
+          </article>
+          <article class="service-card">
+            <h3>Seamless Gutters</h3>
+            <p>We can install or coordinate seamless gutter systems to complete the exterior and protect your home properly.</p>
+          </article>
+          <article class="service-card">
+            <h3>Doors &amp; Windows Coordination</h3>
+            <p>Through trusted partners, we can coordinate door and window upgrades so everything works together as a complete exterior transformation.</p>
+          </article>
+          <article class="service-card">
+            <h3>Fence &amp; Wood Staining</h3>
+            <p>Selective staining services that complement the rest of the property and help the entire exterior feel cohesive.</p>
+          </article>
         </div>
-    </div>
-    <!-- Team End -->
+      </div>
+    </section>
 
+    <section class="section dark-section" id="process">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Our process</span>
+        <h2>A Professional Process From Start to Finish</h2>
+        <p class="section-lead">Premium results come from a professional process, not shortcuts.</p>
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-white py-5 px-sm-3 px-md-5">
-        <div class="row pt-5">
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-primary mb-4">Get In Touch</h4>
-                <p><i class="fa fa-map-marker-alt mr-2"></i>3343 Washington Ave East, Piedmont, OK</p>
-                <p><i class="fa fa-phone-alt mr-2"></i>(405) 697-7828</p>
-                <p><i class="fa fa-envelope mr-2"></i>fmpaintokc@gmail.com</p>
-                <div class="d-flex justify-content-start mt-4">
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-outline-light rounded
-
--circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="btn btn-outline-light rounded-circle text-center mr-2 px-0" style="width: 38px; height: 38px;" href="#"><i class="fab fa-instagram"></i></a>
-                </div>
+        <div class="process-grid">
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <div class="process-placeholder">Consultation photo coming soon</div>
+              <div class="process-number">1</div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-primary mb-4">Quick Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                </div>
+            <div class="process-content">
+              <h3>Consultation</h3>
+              <p>We walk the property with you, understand your goals, and identify the right path forward for the home.</p>
             </div>
-            <div class="col-lg-3 col-md-6 mb-5">
-                <h4 class="text-primary mb-4">Popular Links</h4>
-                <div class="d-flex flex-column justify-content-start">
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                    <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Projects</a>
-                    <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
-                </div>
-            </div>            
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-pressure-washing.jpg" alt="Pressure washing exterior before painting" class="process-image" />
+              <div class="process-number">2</div>
+            </div>
+            <div class="process-content">
+              <h3>Cleaning &amp; Prep</h3>
+              <p>We start by washing and preparing the surfaces so the project is set up correctly from the beginning.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-caulking-trim.jpg" alt="Caulking and trim preparation" class="process-image" />
+              <div class="process-number">3</div>
+            </div>
+            <div class="process-content">
+              <h3>Caulking &amp; Sealing</h3>
+              <p>We seal gaps and detail trim where needed to improve both protection and the finished look.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-masking-prep.jpg" alt="Masking and protecting surfaces before painting" class="process-image" />
+              <div class="process-number">4</div>
+            </div>
+            <div class="process-content">
+              <h3>Masking &amp; Protection</h3>
+              <p>Everything that should not be painted gets properly protected so the final result looks sharp and professional.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-spraying-paint.jpg" alt="Spraying exterior paint" class="process-image" />
+              <div class="process-number">5</div>
+            </div>
+            <div class="process-content">
+              <h3>Paint Application</h3>
+              <p>We apply premium Sherwin-Williams systems with care to deliver even coverage and a durable finish.</p>
+            </div>
+          </article>
+
+          <article class="process-card">
+            <div class="process-image-wrap">
+              <img src="img/process-final-walkthrough.jpg" alt="Final walkthrough of completed project" class="process-image" />
+              <div class="process-number">6</div>
+            </div>
+            <div class="process-content">
+              <h3>Final Walkthrough</h3>
+              <p>We review the completed work with you and make sure the finished result meets the standard we promised.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="owners">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Meet the owners</span>
+        <h2>The People Behind F&amp;M Paint</h2>
+        <p class="section-lead">Veteran and family owned, focused on quality, communication, and results homeowners feel proud to come home to.</p>
+
+        <div class="owners-grid">
+          <div class="owner-photos">
+            <article class="owner-photo-card">
+              <img src="img/forrest.jpg" alt="Forrest from F&amp;M Paint" />
+              <div>Forrest</div>
+            </article>
+            <article class="owner-photo-card">
+              <img src="img/maribel.jpg" alt="Maribel from F&amp;M Paint" />
+              <div>Maribel</div>
+            </article>
+          </div>
+
+          <div class="card">
+            <h3>Built on craftsmanship, not shortcuts</h3>
+            <p>F&amp;M Paint is a family-run business built around one simple idea — your home deserves more than a rushed paint job.</p>
+            <p>We’re not a “get in and get out” crew. We take the time required to get the result right, because we know how much your home matters.</p>
+            <p>With years of hands-on experience and a background rooted in craftsmanship, we focus on the details that most painters skip — proper prep, clean lines, and a finished result that actually feels complete.</p>
+            <p>As a husband-and-wife team, we are directly involved in every step of the process — from the initial walkthrough to the final result. You’re not being handed off to a crew or left wondering who’s in charge.</p>
+            <p>We stay on-site, communicate clearly, and make sure everything is done to the standard we would expect for our own home.</p>
+            <p>We treat every home like it’s our own — and we care about the final result just as much as you do.</p>
+            <p><strong>You’ll work directly with us from the first walkthrough to the final walkthrough.</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> What homeowners are saying</span>
+        <h2>Trusted by Homeowners Across the OKC Area</h2>
+        <p class="section-lead">The best proof is how homeowners feel after the job is done.</p>
+
+        <div class="reviews-grid">
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>From start to finish, F&amp;M was professional, punctual, and easy to work with. The paint job turned out beautifully, the property was treated with respect, and communication stayed strong throughout the project.</p>
+            <div class="review-meta">Travis M.</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>The crew was respectful, careful with the home, and produced high-quality work with strong attention to detail. It was a smooth experience from beginning to end, with results that felt worth every bit of the investment.</p>
+            <div class="review-meta">Jason W.</div>
+          </article>
+
+          <article class="review-card">
+            <div class="stars">★★★★★</div>
+            <p>Great communication from the start and the quote was detailed and easy to understand. They took the time to prep everything right, paid attention to the details, and the final result came out really clean. You can tell they care about doing it the right way.</p>
+            <div class="review-meta">Dusty S.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Common questions</span>
+        <h2>Frequently Asked Questions</h2>
+        <p class="section-lead">A few quick answers to help you understand how we work before we ever step on site.</p>
+
+        <div class="faq-grid">
+          <article class="faq-card">
+            <h3>What exterior surfaces do you paint?</h3>
+            <p>We work with a wide range of exterior surfaces, including wood, siding, trim, stucco, brick, and metal. During the initial walkthrough, we evaluate each surface and build the right approach to ensure the finished result looks clean and lasts.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you help with color selection?</h3>
+            <p>Yes. We offer guidance and can connect you with color consultants to help you feel confident in your choices. Our goal is to make sure the final look fits your home and your vision before any work begins.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>What paint do you use?</h3>
+            <p>We use premium Sherwin-Williams products and select the right system based on your home’s materials and condition. We typically offer good, better, and best options so you can choose the level of durability and long-term performance that fits your goals.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you handle repairs before painting?</h3>
+            <p>Yes, when needed. During the walkthrough, we identify any areas that may require repair and discuss the best way to address them before painting begins so the final result looks complete.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>How long does a typical exterior project take?</h3>
+            <p>Most exterior projects take 2–5 days depending on the size and complexity. We prioritize doing the work correctly and maintaining a clean, organized job site each day.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you require a deposit?</h3>
+            <p>For most projects, we require a 50% deposit to secure your spot on the schedule, with the remaining balance due upon completion. Larger projects may follow a custom payment structure depending on scope.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Do you offer gutters, siding, windows, or doors?</h3>
+            <p>Yes. We can coordinate gutters, siding, windows, and doors through trusted partners so your entire exterior project comes together the right way.</p>
+          </article>
+
+          <article class="faq-card">
+            <h3>Can I call instead of filling out the form?</h3>
+            <p>Absolutely. You can call us directly at <a href="tel:+14056977828" style="color: var(--red); font-weight: 700;">(405) 697-7828</a> if you prefer to talk through your project instead of submitting a form.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Why premium clients choose us</span>
+        <h2>Built for Homeowners Who Want It Done Right</h2>
+        <p class="section-lead">We are not trying to be the cheapest option. We are built for homeowners who value guidance, professionalism, and a result that changes how the home feels.</p>
+
+        <div class="reasons-grid">
+          <article class="reason-card">
+            <h3>Clear Communication</h3>
+            <p>You are never left guessing what is happening. We keep homeowners informed throughout the project.</p>
+          </article>
+          <article class="reason-card">
+            <h3>Clean Job Sites</h3>
+            <p>We clean up every day because a premium experience should feel respectful from beginning to end.</p>
+          </article>
+          <article class="reason-card">
+            <h3>Professional Guidance</h3>
+            <p>We help homeowners make confident decisions about colors, products, and scope so the outcome feels right.</p>
+          </article>
+          <article class="reason-card">
+            <h3>Lasting Results</h3>
+            <p>We use proven Sherwin-Williams systems and prep correctly so the finish looks better and performs longer.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="container pricing-box">
+        <div class="pricing-main">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Project fit</span>
+          <h2>We Specialize in Full Exterior Transformations</h2>
+          <p>Most of our projects range from <strong>$3,000–$8,000+</strong> depending on the size, condition, and scope of the home.</p>
+          <p>We focus on full exterior projects where the details matter and the final result makes a meaningful difference.</p>
+        </div>
+        <div class="pricing-side">
+          <h3>Not a fit for quick patch jobs</h3>
+          <p>We are best for homeowners who want a thoughtful, well-executed exterior result rather than the lowest-price quick fix.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Start your project</span>
+            <h2>Ready to Transform Your Home?</h2>
+            <p>Let’s walk the property, understand your goals, and build a plan that gets you to a home you feel proud to pull into.</p>
+          </div>
+          <div class="cta-panel">
+            <h3>Request your exterior quote</h3>
+            <p>Tell us a little about your home and project goals. From there, we’ll reach out and schedule the next step.</p>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+              <a href="tel:+14056977828" class="btn btn-outline">Call (405) 697-7828</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <p><strong style="color:white;">F&amp;M Paint — Veteran &amp; Family Owned</strong></p>
+        <p>
+        Serving Oklahoma in
+        <a href="/edmond-painters" style="color: white; text-decoration: none;">Edmond</a>, 
+        <a href="/piedmont-painters" style="color: white; text-decoration: none;">Piedmont</a>, 
+        <a href="/yukon-painters" style="color: white; text-decoration: none;">Yukon</a>, 
+        <a href="/bethany-painters" style="color: white; text-decoration: none;">Bethany</a>, 
+        <a href="/the-village-painters" style="color: white; text-decoration: none;">The Village</a>, 
+        and surrounding areas
+        </p>
+        <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+        <p>Sat: By appointment</p>
+        <p>Sun: Closed</p>
+      </div>
+
+      <div class="footer-right">
+        <p><a class="footer-phone" href="tel:+14056977828">(405) 697-7828</a></p>
+        <p><a href="mailto:fmpaintokc@gmail.com" style="color:white;">fmpaintokc@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
     </div>
-    <!-- Footer End -->
+  </footer>
 
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <div class="sticky-cta">
+    <div class="container">
+      <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+    </div>
+  </div>
 </body>
-
 </html>
-
-
-
