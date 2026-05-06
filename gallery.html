@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>See Our Work | Exterior Painting Projects in Oklahoma City | F&amp;M Paint</title>
+  <meta name="description" content="See real exterior painting projects completed by F&amp;M Paint in Piedmont, Edmond, Yukon, Bethany, The Village, and the Oklahoma City metro." />
+  <link rel="canonical" href="https://fmpaintokc.com/see-our-work" />
+
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="img/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --charcoal: #171717;
+      --warm-white: #f4f1ec;
+      --soft-white: #fbfaf7;
+      --red: #d6452f;
+      --coral: #e8a39a;
+      --green: #2f4a34;
+      --text: #1f1f1f;
+      --muted: #6b6b6b;
+      --border: rgba(255,255,255,0.12);
+      --border-dark: rgba(0,0,0,0.1);
+      --shadow: 0 18px 50px rgba(0,0,0,0.14);
+      --radius: 24px;
+      --container: 1180px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--soft-white);
+      line-height: 1.6;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--container));
+      margin: 0 auto;
+    }
+
+    .section { padding: 4.5rem 0; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral);
+    }
+
+    .eyebrow-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--red);
+      display: inline-block;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 1rem;
+      font-family: 'Playfair Display', serif;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h1 { font-size: clamp(2.7rem, 7vw, 5.5rem); }
+    h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
+    h3 { font-size: clamp(1.25rem, 3vw, 1.7rem); }
+
+    p { margin: 0 0 1rem; font-size: 1rem; }
+
+    code {
+      background: rgba(0,0,0,0.06);
+      padding: 0.14rem 0.35rem;
+      border-radius: 7px;
+      font-size: 0.92em;
+    }
+
+    .lead {
+      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
+      color: rgba(255,255,255,0.82);
+      max-width: 42rem;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 46rem;
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0.9rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      box-shadow: 0 10px 25px rgba(214,69,47,0.25);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.2);
+      color: white;
+      background: rgba(255,255,255,0.04);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(0,0,0,0.12);
+      color: var(--text);
+      background: white;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      color: white;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 46px;
+      height: 46px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.04);
+      padding: 0.22rem;
+    }
+
+    .brand-text { min-width: 0; }
+
+    .brand-name {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .brand-sub {
+      display: block;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.66);
+      margin-top: 0.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      color: rgba(255,255,255,0.84);
+      font-size: 0.96rem;
+    }
+
+    .nav-links a:hover { color: white; }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at top right, rgba(232,163,154,0.14), transparent 28%),
+        radial-gradient(circle at 10% 20%, rgba(214,69,47,0.16), transparent 22%),
+        linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
+      color: white;
+      padding: 5.2rem 0 4rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-copy { padding: 1rem 0; }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.9rem;
+      margin-top: 1.75rem;
+    }
+
+    .hero-meta {
+      margin-top: 1.35rem;
+      color: rgba(255,255,255,0.74);
+      font-size: 0.95rem;
+    }
+
+    .hero-card {
+      position: relative;
+      background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      padding: 0.5rem;
+    }
+
+    .hero-image-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 20px;
+      background: #202020;
+    }
+
+    .hero-badge {
+      margin: 0.5rem;
+      background: rgba(11,11,11,0.84);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 18px;
+      padding: 0.95rem 1rem;
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .trust-strip {
+      background: var(--black);
+      color: white;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1rem;
+      padding: 1.2rem 0;
+    }
+
+    .trust-item {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.88);
+      text-align: center;
+    }
+
+    .gallery-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+    }
+
+    .gallery-note {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 50rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      background: white;
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow);
+    }
+
+    .gallery-item a {
+      display: block;
+      color: inherit;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: var(--warm-white);
+      transition: transform 0.25s ease;
+    }
+
+    .gallery-item:hover img { transform: scale(1.025); }
+
+    .gallery-caption {
+      padding: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .gallery-caption strong {
+      display: block;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .alt { background: var(--warm-white); }
+
+    .dark-section {
+      background: var(--black);
+      color: white;
+    }
+
+    .dark-section .section-lead,
+    .dark-section p { color: rgba(255,255,255,0.8); }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 1.5rem;
+      align-items: center;
+      background: linear-gradient(180deg, #171717, #0b0b0b);
+      color: white;
+      border-radius: 32px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box p {
+      color: rgba(255,255,255,0.8);
+      max-width: 36rem;
+    }
+
+    .cta-panel {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+      padding: 1.4rem;
+    }
+
+    .site-footer {
+      background: #090909;
+      color: rgba(255,255,255,0.72);
+      padding: 2rem 0 6rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .footer-left p,
+    .footer-right p {
+      margin: 0.2rem 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .footer-phone {
+      color: white;
+      font-weight: 700;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      color: white;
+      opacity: 0.85;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
+    .sticky-cta {
+      position: fixed !important;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 9999;
+      display: none;
+      width: 100%;
+      transform: translateZ(0);
+      padding: 0.75rem 1rem calc(0.75rem + env(safe-area-inset-bottom));
+      background: rgba(11,11,11,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .sticky-cta .btn { width: 100%; }
+
+    @media (max-width: 1080px) {
+      .hero-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid,
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 760px) {
+      body { padding-bottom: 108px; }
+      .section { padding: 3.6rem 0; }
+      .nav-links { display: none; }
+      .hero { padding-top: 4rem; }
+      .hero-actions { flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .trust-grid,
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-image-grid { grid-template-columns: 1fr 1fr; }
+      .sticky-cta { display: block; }
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1527791345730092');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="/" class="brand">
+        <img src="img/logo-mark.png" alt="F&amp;M Paint logo" class="brand-mark" />
+        <div class="brand-text">
+          <span class="brand-name">F&amp;M Paint</span>
+          <span class="brand-sub">Veteran &amp; Family Owned</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="/">Home</a>
+        <a href="/see-our-work">See Our Work</a>
+        <a href="/#services">Services</a>
+        <a href="/#process">Process</a>
+        <a href="/#owners">Owners</a>
+        <a href="/exterior-quote">Get Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-dot"></span> Exterior Project Gallery</span>
+          <h1>See Our Exterior Painting Work</h1>
+          <p class="lead">Real exterior painting projects completed by F&amp;M Paint across Piedmont, Edmond, Yukon, Bethany, The Village, and the Oklahoma City metro.</p>
+          <div class="hero-actions">
+            <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+            <a href="tel:+14056977828" class="btn btn-secondary">Call (405) 697-7828</a>
+          </div>
+          <p class="hero-meta">Premium exterior transformations • Proper prep • Clean finished results</p>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image-grid">
+            <img src="img/gallery/project-1.jpg" alt="Exterior painting project by F&amp;M Paint in Oklahoma" />
+            <img src="img/gallery/project-2.jpg" alt="Completed exterior painting transformation by F&amp;M Paint" />
+          </div>
+          <div class="hero-badge">
+            <strong>Real homes. Real transformations.</strong>
+            Browse recent exterior projects and see the type of finish, prep, and detail we bring to homes across the OKC metro.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip">
+      <div class="container trust-grid">
+        <div class="trust-item">Veteran &amp; Family Owned</div>
+        <div class="trust-item">Exterior-Focused Specialists</div>
+        <div class="trust-item">Clean Job Sites Every Day</div>
+        <div class="trust-item">Clear Communication</div>
+        <div class="trust-item">Premium Sherwin-Williams Materials</div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Recent exterior projects</span>
+        <h2>Homes We’ve Painted</h2>
+        <p class="section-lead">Browse real exterior painting projects completed by F&amp;M Paint across the Oklahoma City metro. These photos show the type of prep, detail, and finished results we bring to every home.</p>
+
+        <div class="gallery-controls">
+          <a href="/exterior-quote" class="btn btn-primary">Start Your Exterior Quote</a>
+          <a href="/" class="btn btn-outline">Back to Home</a>
+        </div>
+
+        <div class="gallery-grid" id="projectGallery"></div>
+      </div>
+    </section>
+
+    <section class="section dark-section">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Built for trust</span>
+        <h2>Exterior Transformations Done With Care</h2>
+        <p class="section-lead">Every home is different, but the goal stays the same: thoughtful preparation, clean execution, and a finished result that makes your home feel complete.</p>
+      </div>
+    </section>
+
+    <section class="section" id="quote">
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <span class="eyebrow"><span class="eyebrow-dot"></span> Start your project</span>
+            <h2>Ready to Transform Your Home?</h2>
+            <p>Tell us about your exterior project and we’ll help you understand the right next step for your home.</p>
+          </div>
+          <div class="cta-panel">
+            <h3>Request your exterior quote</h3>
+            <p>Send us your project details and we’ll reach out to get the process started.</p>
+            <div style="display:flex; flex-direction:column; gap:0.75rem;">
+              <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+              <a href="tel:+14056977828" class="btn btn-outline">Call (405) 697-7828</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div class="footer-left">
+        <p><strong style="color:white;">F&amp;M Paint — Veteran &amp; Family Owned</strong></p>
+        <p>
+        Serving Oklahoma in
+        <a href="/edmond-painters" style="color: white; text-decoration: none;">Edmond</a>, 
+        <a href="/piedmont-painters" style="color: white; text-decoration: none;">Piedmont</a>, 
+        <a href="/yukon-painters" style="color: white; text-decoration: none;">Yukon</a>, 
+        <a href="/bethany-painters" style="color: white; text-decoration: none;">Bethany</a>, 
+        <a href="/the-village-painters" style="color: white; text-decoration: none;">The Village</a>, 
+        and surrounding areas
+        </p>
+        <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
+        <p>Sat: By appointment</p>
+        <p>Sun: Closed</p>
+      </div>
+
+      <div class="footer-right">
+        <p><a class="footer-phone" href="tel:+14056977828">(405) 697-7828</a></p>
+        <p><a href="mailto:fmpaintokc@gmail.com" style="color:white;">fmpaintokc@gmail.com</a></p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.instagram.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-cta">
+    <div class="container">
+      <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
+    </div>
+  </div>
+
+  <script>
+    const gallery = document.getElementById('projectGallery');
+
+    // Change this number when you upload more photos.
+    const totalImages = 40;
+
+    // Optional: change this if you want a different folder later.
+    const imageFolder = 'img/gallery/';
+
+    for (let i = 1; i <= totalImages; i++) {
+      const article = document.createElement('article');
+      article.className = 'gallery-item';
+
+      const imgSrc = `${imageFolder}project-${i}.jpg`;
+
+      article.innerHTML = `
+        <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" aria-label="Open exterior painting project ${i}">
+          <img
+            src="${imgSrc}"
+            alt="Exterior painting project ${i} completed by F&amp;M Paint in the Oklahoma City metro"
+            loading="lazy"
+            onerror="this.closest('.gallery-item').remove();"
+          >
+          <div class="gallery-caption">
+            <strong>Exterior Project ${i}</strong>
+            Completed exterior painting project by F&amp;M Paint in the Oklahoma City metro.
+          </div>
+        </a>
+      `;
+
+      gallery.appendChild(article);
+    }
+  </script>
+</body>
+</html>
