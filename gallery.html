@@ -527,8 +527,8 @@
 
         <div class="hero-card">
           <div class="hero-image-grid">
-            <img src="img/gallery/project-1.jpg" alt="Exterior painting project by F&amp;M Paint in Oklahoma" />
-            <img src="img/gallery/project-2.jpg" alt="Completed exterior painting transformation by F&amp;M Paint" />
+            <img src="img/gallery/edmond-exterior-paint-full-home-1.JPEG" alt="Exterior painting project by F&amp;M Paint in Edmond Oklahoma" />
+            <img src="img/gallery/piedmont-exterior-paint-full-home-1.JPEG" alt="Completed exterior painting transformation by F&amp;M Paint in Piedmont Oklahoma" />
           </div>
           <div class="hero-badge">
             <strong>Real homes. Real transformations.</strong>
@@ -629,36 +629,169 @@
 
   <script>
     const gallery = document.getElementById('projectGallery');
-
-    // Change this number when you upload more photos.
-    const totalImages = 40;
-
-    // Optional: change this if you want a different folder later.
     const imageFolder = 'img/gallery/';
 
-    for (let i = 1; i <= totalImages; i++) {
+    const projectImages = [
+      'okc-exterior-paint-full-home-1.JPG',
+      'edmond-exterior-paint-full-home-1.JPEG',
+      'piedmont-exterior-paint-full-home-1.JPEG',
+      'yukon-exterior-paint-full-home-1.JPEG',
+      'yukon-exterior-paint-partial-home-1.JPEG',
+      'bethany-exterior-paint-brick-full-home-1.JPEG',
+      'edmond-exterior-paint-door-full-home-1.JPEG',
+      'edmond-exterior-paint-full-home-2.1.JPEG',
+      'edmond-exterior-paint-full-home-2.JPEG',
+      'edmond-exterior-paint-full-home-3.JPEG',
+      'edmond-exterior-paint-full-home-5.JPEG',
+      'edmond-exterior-paint-siding-home-4.JPEG',
+      'okc-exterior-paint-full-brick-home-3.JPEG',
+      'okc-exterior-paint-full-home-2.jpeg',
+      'okc-exterior-paint-garage-home-1.JPEG',
+      'okc-exterior-paint-trim-home-1.JPEG',
+      'piedmont-exterior-paint-full-home-2.JPEG',
+      'surrey-hills-exterior-paint-full-home-1.JPEG',
+      'yukon-exterior-paint-full-home-2.JPEG',
+      'yukon-exterior-paint-sunroom-home-1.JPEG',
+      'edmond-exterior-paint-full-home-6.JPEG',
+      'yukon-exterior-paint-full-home-6.JPEG',
+      'edmond-exterior-paint-full-home-10.JPEG',
+      'edmond-exterior-paint-garage-home-7.JPEG',
+      'okc-exterior-paint-full-home-7.JPEG',
+      'okc-exterior-paint-full-home-11.JPEG',
+      'oklahoma-exterior-paint-full-home-6.JPEG',
+      'piedmont-exterior-paint-full-home-6.JPEG',
+      'piedmont-exterior-paint-full-home-12.JPEG',
+      'yukon-exterior-paint-door-home-7.JPEG',
+      'yukon-exterior-paint-full-home-7.1.JPEG',
+      'yukon-exterior-paint-full-home-7.JPEG',
+      'yukon-exterior-paint-full-home-8.JPEG',
+      'yukon-exterior-paint-full-home-9.1.JPEG',
+      'yukon-exterior-paint-full-home-9.2.JPEG',
+      'yukon-exterior-paint-full-home-9.JPEG',
+      'yukon-exterior-paint-full-home-10.JPEG',
+      'yukon-exterior-paint-full-home-11.JPEG',
+      'yukon-exterior-paint-full-home-12.JPEG',
+      'yukon-exterior-paint-sunroom-home-1.1.JPEG',
+      'yukon-exterior-stain-pergola-home-9.2.JPEG',
+      'yukon-exterior-stain-pergola-home-9.JPEG',
+      'edmond-exterior-paint-full-home-18.JPEG',
+      'edmond-exterior-paint-full-home-19.JPEG',
+      'edmond-exterior-paint-full-home-20.JPEG',
+      'edmond-exterior-paint-full-home-21.JPEG',
+      'edmond-exterior-paint-full-home-22.JPEG',
+      'edmond-exterior-paint-full-home-23.JPEG',
+      'edmond-exterior-paint-full-home-24.JPEG',
+      'edmond-exterior-paint-full-home-27.JPEG',
+      'okc-exterior-paint-full-home-13.JPEG',
+      'okc-exterior-paint-full-home-16.JPEG',
+      'piedmont-exterior-paint-full-home-14.JPEG',
+      'surrey-hills-exterior-paint-full-home-20.JPEG',
+      'yukon-exterior-paint-full-home-15.JPEG',
+      'yukon-exterior-paint-full-home-17.JPEG',
+      'yukon-exterior-paint-full-home-18.JPEG',
+      'yukon-exterior-paint-full-home-20.JPEG',
+      'edmond-exterior-paint-full-home-28.JPEG',
+      'edmond-exterior-paint-full-home-29.JPEG',
+      'yukon-exterior-paint-full-home-29.JPEG',
+      'yukon-exterior-paint-full-home-30.JPEG',
+      'edmond-exterior-paint-full-home-31.JPEG',
+      'edmond-exterior-paint-full-home-32.JPEG',
+      'edmond-exterior-paint-full-home-33.JPEG',
+      'edmond-exterior-paint-full-home-34.JPEG',
+      'edmond-exterior-paint-full-home-35.JPEG',
+      'okc-exterior-paint-full-brick-home-31.JPEG',
+      'okc-exterior-paint-full-home-31.JPEG',
+      'okc-exterior-paint-full-home-31.JPG',
+      'okc-exterior-paint-full-home-34.JPEG',
+      'okc-exterior-paint-full-home-36.JPEG',
+      'piedmont-exterior-paint-full-brick-home-31.JPEG',
+      'yukon-exterior-paint-full-home-33.JPEG',
+      'yukon-exterior-paint-full-home-36.JPEG',
+      'yukon-exterior-paint-window-trim-home-31.JPEG',
+      'okc-exterior-paint-full-home-41.JPEG',
+      'piedmont-exterior-paint-full-home-31.JPEG',
+      'piedmont-exterior-paint-full-home-32.JPEG',
+      'yukon-exterior-paint-full-home-40.JPEG',
+      'yukon-exterior-paint-full-home-41.JPEG',
+      'edmond-exterior-paint-full-home-42.JPEG',
+      'edmond-exterior-paint-door-home-31.JPEG',
+      'edmond-exterior-paint-full-home-47.JPEG',
+      'edmond-exterior-paint-full-home-48.JPEG',
+      'edmond-exterior-paint-full-home-49.JPEG',
+      'edmond-exterior-paint-full-home-50.JPEG',
+      'edmond-exterior-paint-full-home-57.JPEG',
+      'okc-exterior-paint-full-home-43.JPEG',
+      'okc-exterior-paint-full-home-50.JPEG',
+      'oklahoma-exterior-paint-full-home-50.JPEG',
+      'piedmont-exterior-paint-full-home-45.JPEG',
+      'piedmont-exterior-paint-full-home-50.JPEG',
+      'piedmont-exterior-paint-full-home-51.JPEG',
+      'piedmont-exterior-paint-full-home-52.JPEG',
+      'piedmont-exterior-paint-full-home-53.JPEG',
+      'surrey-hills-exterior-paint-full-home-50.JPEG',
+      'surrey-hills-exterior-paint-full-home-51.JPEG',
+      'surrey-hills-exterior-paint-full-home-54.JPEG',
+      'yukon-exterior-paint-full-home-48.JPEG',
+      'yukon-exterior-paint-full-home-53.JPEG',
+      'bethany-exterior-paint-full-home-50.JPEG',
+      'bethany-exterior-paint-full-home-51.JPEG',
+      'edmond-exterior-paint-full-home-67.JPEG',
+      'edmond-exterior-paint-full-home-68.JPEG',
+      'edmond-exterior-paint-full-home-69.JPEG',
+      'edmond-exterior-paint-full-stucco-home-50.JPEG',
+      'okc-exterior-paint-full-home-55.JPEG',
+      'piedmont-exterior-paint-full-home-60.JPEG',
+      'piedmont-exterior-paint-full-home-61.JPEG',
+      'piedmont-exterior-paint-full-home-71.JPEG',
+      'piedmont-exterior-paint-full-home-76.JPEG',
+      'piedmont-exterior-stain-door-home-50.JPEG',
+      'yukon-exterior-paint-full-home-56.JPEG',
+      'yukon-exterior-paint-full-home-60.jpeg',
+      'yukon-exterior-paint-full-home-61.JPEG',
+      'yukon-exterior-paint-full-home-62.JPEG',
+      'yukon-exterior-paint-full-home-68.JPEG',
+      'yukon-exterior-paint-full-home-70.JPEG',
+      'yukon-exterior-paint-full-home-75.JPEG'
+    ];
+
+    function filenameToTitle(filename) {
+      const withoutExtension = filename.substring(0, filename.lastIndexOf('.'));
+      const cleaned = withoutExtension
+        .split('-')
+        .filter(part => isNaN(Number(part)))
+        .join(' ');
+
+      return cleaned
+        .split(' ')
+        .filter(Boolean)
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+    }
+
+    projectImages.forEach(filename => {
       const article = document.createElement('article');
       article.className = 'gallery-item';
 
-      const imgSrc = `${imageFolder}project-${i}.jpg`;
+      const imgSrc = imageFolder + filename;
+      const title = filenameToTitle(filename);
 
       article.innerHTML = `
-        <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" aria-label="Open exterior painting project ${i}">
+        <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" aria-label="Open ${title}">
           <img
             src="${imgSrc}"
-            alt="Exterior painting project ${i} completed by F&amp;M Paint in the Oklahoma City metro"
+            alt="${title} completed by F&amp;M Paint"
             loading="lazy"
             onerror="this.closest('.gallery-item').remove();"
           >
           <div class="gallery-caption">
-            <strong>Exterior Project ${i}</strong>
-            Completed exterior painting project by F&amp;M Paint in the Oklahoma City metro.
+            <strong>${title}</strong>
+            Exterior painting project completed by F&amp;M Paint.
           </div>
         </a>
       `;
 
       gallery.appendChild(article);
-    }
+    });
   </script>
 </body>
 </html>
