@@ -14,6 +14,20 @@
   </url>
 
   <url>
+    <loc>https://fmpaintokc.com/gallery</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://fmpaintokc.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- CITY PAGES -->
+
+  <url>
     <loc>https://fmpaintokc.com/edmond-painters</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -43,46 +57,42 @@
     <priority>0.7</priority>
   </url>
 
-    <url>
-    <loc>https://fmpaintokc.com/gallery</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://fmpaintokc.com/blog</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
+  <!-- BLOG / RESOURCE PAGES -->
 
   <url>
     <loc>https://fmpaintokc.com/exterior-painting-cost-okc</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
 
-<url>
-  <loc>https://fmpaintokc.com/painting-brick-homes-oklahoma</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://fmpaintokc.com/painting-brick-homes-oklahoma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://fmpaintokc.com/how-often-repaint-house-exterior-oklahoma</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://fmpaintokc.com/how-often-repaint-house-exterior-oklahoma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://fmpaintokc.com/piedmont-exterior-painting-guide</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
+  <url>
+    <loc>https://fmpaintokc.com/piedmont-exterior-painting-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://fmpaintokc.com/best-exterior-paint-colors-oklahoma</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.8</priority>
-</url>
-  
+  <url>
+    <loc>https://fmpaintokc.com/best-exterior-paint-colors-oklahoma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://fmpaintokc.com/good-better-best-exterior-paint-products</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
