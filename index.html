@@ -4,18 +4,18 @@
   <script src="https://analytics.ahrefs.com/analytics.js" data-key="A5IV0jFIFZklcFi6DAa20w" async></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Exterior House Painters in OKC, Edmond & Piedmont | F&M Paint</title>
+  <title>Exterior Painters in OKC, Edmond & Piedmont | F&M Paint</title>
   <meta name="description" content="F&M Paint provides premium exterior house painting in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and nearby areas. Veteran and family owned." />
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fmpaintokc.com/">
-  <meta property="og:title" content="Exterior House Painters in OKC, Edmond & Piedmont | F&M Paint">
+  <meta property="og:title" content="Exterior Painters in OKC, Edmond & Piedmont | F&M Paint">
   <meta property="og:description" content="Premium exterior house painting in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and nearby areas. Veteran and family owned.">
   <meta property="og:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
   <meta property="og:image:width" content="2048">
   <meta property="og:image:height" content="1536">
   
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Exterior House Painters in OKC, Edmond & Piedmont | F&M Paint">
+  <meta name="twitter:title" content="Exterior Painters in OKC, Edmond & Piedmont | F&M Paint">
   <meta name="twitter:description" content="Premium exterior house painting in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and nearby areas. Veteran and family owned.">
   <meta name="twitter:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
 
@@ -95,22 +95,46 @@
       letter-spacing: -0.02em;
     }
 
-    h1 { font-size: clamp(2.7rem, 7vw, 5.5rem); }
+    h1 {
+      font-size: clamp(2.65rem, 4.15vw, 4.15rem);
+      line-height: 1.03;
+      letter-spacing: -0.035em;
+      max-width: 13ch;
+      text-wrap: balance;
+    }
     h2 { font-size: clamp(2rem, 5vw, 3.25rem); }
     h3 { font-size: clamp(1.25rem, 3vw, 1.7rem); }
 
-    p { margin: 0 0 1rem; font-size: 1rem; }
-
-    .lead {
-      font-size: clamp(1.05rem, 2.1vw, 1.2rem);
-      color: rgba(255,255,255,0.82);
-      max-width: 40rem;
+    p {
+      margin: 0 0 1rem;
+      font-size: 1rem;
+      text-wrap: pretty;
     }
 
+    .lead {
+      font-size: clamp(0.98rem, 1.2vw, 1.08rem);
+      line-height: 1.62;
+      color: rgba(255,255,255,0.78);
+      max-width: 31rem;
+      margin-top: 1.05rem;
+    }
     .section-lead {
       color: var(--muted);
-      max-width: 42rem;
+      max-width: 58rem;
       font-size: 1.05rem;
+      line-height: 1.7;
+      text-wrap: pretty;
+    }
+
+    .section-lead,
+    .reason-card p,
+    .service-card p,
+    .faq-card p,
+    .review-card p,
+    .quote-card p,
+    .process-content p,
+    .card p {
+      max-width: 60ch;
     }
 
     .btn {
@@ -206,6 +230,14 @@
 
     .nav-links a:hover { color: white; }
 
+    .nav-quote {
+      background: var(--red);
+      color: white !important;
+      padding: 0.72rem 1.25rem;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(214,69,47,0.22);
+    }
+
     .hero {
       position: relative;
       overflow: hidden;
@@ -214,23 +246,86 @@
         radial-gradient(circle at 10% 20%, rgba(214,69,47,0.16), transparent 22%),
         linear-gradient(180deg, #101010 0%, #0b0b0b 100%);
       color: white;
-      padding: 5.2rem 0 4rem;
+      min-height: calc(100vh - 76px);
+      display: flex;
+      align-items: center;
+      padding: 3.1rem 0 3rem;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 2rem;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: 2.6rem;
       align-items: center;
     }
 
-    .hero-copy { padding: 1rem 0; }
+    .hero-copy {
+      padding: 2.2rem 0 0;
+    }
 
     .hero-actions {
       display: flex;
       flex-wrap: wrap;
       gap: 0.9rem;
       margin-top: 1.75rem;
+    }
+
+    .hero-actions .btn {
+      min-width: 190px;
+    }
+
+    .hero-secondary {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.18);
+      color: white;
+    }
+
+    .hero-secondary:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .hero-rule {
+      width: 96px;
+      height: 2px;
+      background: var(--red);
+      margin: 1.05rem 0 0;
+    }
+
+    .hero-trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      margin-top: 1.7rem;
+      padding-top: 1.35rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-trust-item {
+      padding: 0 1rem;
+      color: rgba(255,255,255,0.78);
+      font-size: 0.84rem;
+      line-height: 1.35;
+      text-align: center;
+      border-left: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .hero-trust-item:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    .hero-trust-item strong {
+      display: block;
+      color: white;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero-trust-icon {
+      color: var(--red);
+      font-size: 1.25rem;
+      line-height: 1;
+      margin-bottom: 0.35rem;
     }
 
     .hero-meta {
@@ -249,8 +344,11 @@
     }
 
     .hero-image {
-      aspect-ratio: 4 / 5;
+      aspect-ratio: 16 / 10;
+      height: clamp(360px, calc(100vh - 180px), 610px);
+      min-height: 0;
       object-fit: cover;
+      object-position: center center;
       width: 100%;
     }
 
@@ -603,6 +701,20 @@
 
     .tracking-pixel { display: none; }
 
+    @media (max-height: 850px) and (min-width: 1081px) {
+      .hero { padding: 2.2rem 0; }
+
+      h1 { font-size: clamp(2.55rem, 3.85vw, 3.95rem); }
+
+      .lead { font-size: 0.98rem; line-height: 1.55; margin-top: 0.9rem; }
+
+      .hero-actions { margin-top: 1.2rem; }
+
+      .hero-trust { margin-top: 1.25rem; padding-top: 1rem; }
+
+      .hero-image { height: clamp(340px, calc(100vh - 150px), 540px); }
+    }
+
     @media (max-width: 1080px) {
       .hero-grid,
       .split-grid,
@@ -611,6 +723,10 @@
       .pricing-box {
         grid-template-columns: 1fr;
       }
+
+      h1 { max-width: 13ch; }
+
+      .hero-image { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
 
       .trust-grid,
       .services-grid,
@@ -629,11 +745,33 @@
 
       .nav-links { display: none; }
 
-      .hero { padding-top: 4rem; }
+      .hero { min-height: auto; padding: 2.75rem 0 3rem; display: block; }
+
+      h1 {
+        font-size: clamp(2.45rem, 10vw, 3.25rem);
+        max-width: 13ch;
+      }
+
+      .lead { max-width: 100%; }
+
+      .hero-image {
+        aspect-ratio: 4 / 3;
+        min-height: 0;
+      }
 
       .hero-actions { flex-direction: column; }
 
       .hero-actions .btn { width: 100%; }
+
+      .hero-trust {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 0;
+        margin-top: 2rem;
+      }
+
+      .hero-trust-item:nth-child(odd) { border-left: 0; padding-left: 0; }
+
+      .hero-trust-item { text-align: left; }
 
       .trust-grid,
       .gallery-grid,
@@ -784,7 +922,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
         <a href="#process">Process</a>
         <a href="#owners">Owners</a>
         <a href="#faq">FAQ</a>
-        <a href="#quote">Get Quote</a>
+        <a href="#quote" class="nav-quote">Get Quote</a>
       </nav>
     </div>
   </header>
@@ -794,21 +932,20 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow"><span class="eyebrow-dot"></span> Premium Exterior Transformations</span>
-          <h1>Exterior House Painting That Makes Your Home Feel Finished, Intentional, and Proud</h1>
-          <p class="lead">Premium exterior house painting in Oklahoma City, Edmond, Piedmont, Yukon, Bethany, and nearby areas for homeowners who want it done right.</p>
+          <h1>Exterior Painting That Makes Your Home Feel Finished, Intentional, and Proud</h1>
+          <div class="hero-rule"></div>
+          <p class="lead">Premium exterior house painting in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and surrounding areas for homeowners who want it done right.</p>
           <div class="hero-actions">
             <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
-            <a href="tel:+14056977828" class="btn btn-secondary">Call (405) 697-7828</a>
+            <a href="#transformations" class="btn hero-secondary">View Transformations</a>
           </div>
-          <p class="hero-meta">Veteran &amp; family owned • Sherwin-Williams systems • Exterior-focused specialists</p>
         </div>
 
         <div class="hero-card">
-          <img src="img/hero-home.jpg" alt="Beautiful finished exterior house painted by F&M Paint in the Oklahoma City area" class="hero-image" width="900" height="1125" fetchpriority="high" loading="eager" decoding="async" />
-          <div class="hero-badge">
-            <strong>Built for homeowners who want it done right</strong>
-            From consultation to final walkthrough, we help you get to the finished result with confidence.
-          </div>
+
+
+        <div class="hero-card">
+          <img src="img/hero-home.jpg" alt="Beautiful finished exterior house painted by F&M Paint in the Oklahoma City area" class="hero-image" width="1200" height="750" fetchpriority="high" loading="eager" decoding="async" />
         </div>
       </div>
     </section>
