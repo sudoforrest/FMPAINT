@@ -805,18 +805,22 @@
     }
   </style>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code - delayed until after initial page load for better performance -->
 <script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1527791345730092');
-fbq('track', 'PageView');
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1527791345730092');
+    fbq('track', 'PageView');
+  }, 2500);
+});
 </script>
 <noscript><img height="1" width="1" class="tracking-pixel"
 src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
@@ -915,7 +919,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
   <header class="site-header">
     <div class="container nav">
       <a href="#top" class="brand">
-        <img src="img/logo-mark.png" alt="F&M Paint logo" class="brand-mark" />
+        <img src="img/logo-mark.png" alt="F&M Paint logo" class="brand-mark" width="46" height="46" decoding="async" />
         <div class="brand-text">
           <span class="brand-name">F&amp;M Paint</span>
           <span class="brand-sub">Veteran &amp; Family Owned</span>
@@ -950,12 +954,8 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
         </div>
 
         <div class="hero-card">
-
-
-        <div class="hero-card">
           <img src="img/hero-home.webp" alt="Beautiful finished exterior house painted by F&M Paint in the Oklahoma City area" class="hero-image" width="1200" height="750" fetchpriority="high" loading="eager" decoding="async" />
         </div>
-      </div>
     </section>
 
     <section class="trust-strip">
@@ -994,15 +994,15 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
         <div class="gallery-grid">
           <article class="gallery-item">
-            <img src="img/transformation-1.webp" alt="Exterior transformation by F&M Paint" />
+            <img src="img/transformation-1.webp" alt="Exterior transformation by F&M Paint" loading="lazy" decoding="async" />
             <div class="gallery-caption">Before and after transformation with full prep, premium coatings, and a clean finished look.</div>
           </article>
           <article class="gallery-item">
-            <img src="img/transformation-2.webp" alt="Freshly painted house exterior by F&M Paint" />
+            <img src="img/transformation-2.webp" alt="Freshly painted house exterior by F&M Paint" loading="lazy" decoding="async" />
             <div class="gallery-caption">A polished exterior result that helps the home feel complete, intentional, and elevated.</div>
           </article>
           <article class="gallery-item">
-            <img src="img/transformation-3.webp" alt="Completed premium exterior paint project" />
+            <img src="img/transformation-3.webp" alt="Completed premium exterior paint project" loading="lazy" decoding="async" />
             <div class="gallery-caption">Exterior work guided from consultation to final walkthrough with attention to every detail.</div>
           </article>
         </div>
@@ -1072,7 +1072,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="process-card">
             <div class="process-image-wrap">
-              <img src="img/process-pressure-washing.webp" alt="Pressure washing exterior before painting" class="process-image" />
+              <img src="img/process-pressure-washing.webp" alt="Pressure washing exterior before painting" class="process-image" loading="lazy" decoding="async" />
               <div class="process-number">2</div>
             </div>
             <div class="process-content">
@@ -1083,7 +1083,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="process-card">
             <div class="process-image-wrap">
-              <img src="img/process-caulking-trim.webp" alt="Caulking and trim preparation" class="process-image" />
+              <img src="img/process-caulking-trim.webp" alt="Caulking and trim preparation" class="process-image" loading="lazy" decoding="async" />
               <div class="process-number">3</div>
             </div>
             <div class="process-content">
@@ -1094,7 +1094,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="process-card">
             <div class="process-image-wrap">
-              <img src="img/process-masking-prep.webp" alt="Masking and protecting surfaces before painting" class="process-image" />
+              <img src="img/process-masking-prep.webp" alt="Masking and protecting surfaces before painting" class="process-image" loading="lazy" decoding="async" />
               <div class="process-number">4</div>
             </div>
             <div class="process-content">
@@ -1105,7 +1105,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="process-card">
             <div class="process-image-wrap">
-              <img src="img/process-spraying-paint.webp" alt="Spraying exterior paint" class="process-image" />
+              <img src="img/process-spraying-paint.webp" alt="Spraying exterior paint" class="process-image" loading="lazy" decoding="async" />
               <div class="process-number">5</div>
             </div>
             <div class="process-content">
@@ -1116,7 +1116,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="process-card">
             <div class="process-image-wrap">
-              <img src="img/process-final-walkthrough.webp" alt="Final walkthrough of completed project" class="process-image" />
+              <img src="img/process-final-walkthrough.webp" alt="Final walkthrough of completed project" class="process-image" loading="lazy" decoding="async" />
               <div class="process-number">6</div>
             </div>
             <div class="process-content">
@@ -1137,11 +1137,11 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
         <div class="owners-grid">
           <div class="owner-photos">
             <article class="owner-photo-card">
-              <img src="img/forrest.jpg" alt="Forrest from F&amp;M Paint" />
+              <img src="img/forrest.jpg" alt="Forrest from F&amp;M Paint" loading="lazy" decoding="async" />
               <div>Forrest</div>
             </article>
             <article class="owner-photo-card">
-              <img src="img/maribel.jpg" alt="Maribel from F&amp;M Paint" />
+              <img src="img/maribel.jpg" alt="Maribel from F&amp;M Paint" loading="lazy" decoding="async" />
               <div>Maribel</div>
             </article>
           </div>
