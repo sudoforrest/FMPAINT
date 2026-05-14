@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -593,6 +595,38 @@
     .process-content h3 { color: #1f1f1f; }
     .process-content p { color: #5a5a5a; }
 
+
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .resource-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: 22px;
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .resource-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .resource-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 1rem;
+    }
+
+    .resource-card a {
+      color: var(--red);
+      font-weight: 800;
+    }
+
     .pricing-box {
       display: grid;
       grid-template-columns: 1.15fr 0.85fr;
@@ -729,7 +763,39 @@
       .split-grid,
       .owners-grid,
       .cta-box,
-      .pricing-box {
+  
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .resource-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: 22px;
+      padding: 1.35rem;
+      box-shadow: var(--shadow);
+    }
+
+    .resource-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .resource-card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+      margin-bottom: 1rem;
+    }
+
+    .resource-card a {
+      color: var(--red);
+      font-weight: 800;
+    }
+
+    .pricing-box {
         grid-template-columns: 1fr;
       }
 
@@ -741,7 +807,8 @@
       .services-grid,
       .process-grid,
       .reviews-grid,
-      .faq-grid {
+      .faq-grid,
+      .resources-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -789,6 +856,7 @@
       .reasons-grid,
       .reviews-grid,
       .faq-grid,
+      .resources-grid,
       .owner-photos {
         grid-template-columns: 1fr;
       }
@@ -1221,7 +1289,7 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
 
           <article class="faq-card">
             <h3>What paint do you use?</h3>
-            <p>We use premium Sherwin-Williams products and select the right system based on your home’s materials and condition. We typically offer good, better, and best options so you can choose the level of durability and long-term performance that fits your goals.</p>
+            <p>We use premium Sherwin-Williams products and select the right system based on your home’s materials and condition. We typically offer good, better, and best options so you can choose the level of durability and long-term performance that fits your goals. You can also read our <a href="/good-better-best-exterior-paint-products" class="red-link">exterior paint product guide</a> to compare common options.</p>
           </article>
 
           <article class="faq-card">
@@ -1294,12 +1362,47 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
         <div class="pricing-main">
           <span class="eyebrow"><span class="eyebrow-dot"></span> Project fit</span>
           <h2>We Specialize in Full Exterior Painting Transformations</h2>
-          <p>Most full exterior house painting projects range from <strong>$3,000–$8,000+</strong> depending on the size, condition, number of colors, prep required, and scope of the home.</p>
-          <p>We focus on full exterior projects where the details matter and the final result makes a meaningful difference.</p>
+          <p>Most full exterior house painting projects range from <strong>$3,000–$8,000+</strong> depending on the size, condition, number of colors, prep required, and scope of the home. For a deeper breakdown, read our <a href="/exterior-painting-cost-okc" class="red-link">exterior painting cost guide</a>.</p>
+          <p>We focus on full exterior projects where the details matter and the final result makes a meaningful difference, including the right prep work and the right <a href="/good-better-best-exterior-paint-products" class="red-link">exterior paint product system</a> for the home.</p>
         </div>
         <div class="pricing-side">
           <h3>Not a fit for quick patch jobs</h3>
           <p>We are best for homeowners who want a thoughtful, well-executed exterior result rather than the lowest-price quick fix.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Helpful homeowner resources</span>
+        <h2>Exterior Painting Guides for Oklahoma Homeowners</h2>
+        <p class="section-lead">Planning an exterior project? These guides can help you understand cost, paint products, painted brick, local considerations, and what to expect before requesting a quote.</p>
+
+        <div class="resources-grid">
+          <article class="resource-card">
+            <h3>Good Better Best Exterior Paint Products</h3>
+            <p>Compare exterior paint product options, including common Sherwin-Williams systems used for Oklahoma homes.</p>
+            <a href="/good-better-best-exterior-paint-products">Read the paint product guide</a>
+          </article>
+
+          <article class="resource-card">
+            <h3>Exterior Painting in Piedmont Oklahoma</h3>
+            <p>A local homeowner guide for exterior painting considerations in Piedmont and nearby Oklahoma communities.</p>
+            <a href="/piedmont-exterior-painting-guide">Read the Piedmont guide</a>
+          </article>
+
+          <article class="resource-card">
+            <h3>Exterior Painting Cost Guide</h3>
+            <p>Learn what affects exterior painting cost, including size, prep work, brick, siding, trim, and product selection.</p>
+            <a href="/exterior-painting-cost-okc">See exterior painting costs</a>
+          </article>
+
+          <article class="resource-card">
+            <h3>Painting Brick Homes in Oklahoma</h3>
+            <p>Understand what homeowners should know before painting brick, including prep, coatings, and long-term expectations.</p>
+            <a href="/painting-brick-homes-oklahoma">Read the brick painting guide</a>
+          </article>
         </div>
       </div>
     </section>
@@ -1349,6 +1452,10 @@ src="https://www.facebook.com/tr?id=1527791345730092&ev=PageView&noscript=1"
   <a href="/gallery" class="footer-link">Project Gallery</a>
   &nbsp;|&nbsp;
   <a href="/exterior-quote" class="footer-link">Exterior Quote Request</a>
+  &nbsp;|&nbsp;
+  <a href="/good-better-best-exterior-paint-products" class="footer-link">Paint Product Guide</a>
+  &nbsp;|&nbsp;
+  <a href="/piedmont-exterior-painting-guide" class="footer-link">Piedmont Painting Guide</a>
 </p>
       </div>
 
