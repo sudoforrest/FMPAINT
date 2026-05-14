@@ -1,23 +1,24 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gallery | Exterior Painting Projects in Oklahoma City | F&amp;M Paint</title>
-  <meta name="description" content="See real exterior painting projects completed by F&amp;M Paint in Piedmont, Edmond, Yukon, Bethany, The Village, and the Oklahoma City metro." />
+  <title>Exterior Painting Gallery in Edmond, Yukon & OKC | F&amp;M Paint</title>
+  <meta name="description" content="View exterior house painting projects by F&amp;M Paint in Edmond, Yukon, Oklahoma City, Bethany, The Village, Piedmont, and surrounding areas. See painted brick, siding, trim, doors, and full exterior transformations." />
   
 <!-- GALLERY -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fmpaintokc.com/gallery">
-<meta property="og:title" content="Exterior Painting Gallery | F&M Paint">
-<meta property="og:description" content="Browse exterior painting transformations completed by F&M Paint across the Oklahoma City metro area.">
+<meta property="og:title" content="Exterior Painting Gallery in Edmond, Yukon & OKC | F&M Paint">
+<meta property="og:description" content="Browse exterior painting transformations, painted brick homes, siding projects, trim work, and full exterior repaints completed by F&M Paint.">
 <meta property="og:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
 <meta property="og:image:width" content="2048">
 <meta property="og:image:height" content="1536">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Exterior Painting Gallery | F&M Paint">
-<meta name="twitter:description" content="Browse exterior painting transformations completed by F&M Paint across the Oklahoma City metro area.">
+<meta name="twitter:title" content="Exterior Painting Gallery in Edmond, Yukon & OKC | F&M Paint">
+<meta name="twitter:description" content="Browse exterior painting projects by F&M Paint across Edmond, Yukon, Oklahoma City, and nearby communities.">
 <meta name="twitter:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
 
 <link rel="canonical" href="https://fmpaintokc.com/gallery" />
@@ -305,6 +306,51 @@
       text-align: center;
     }
 
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 1.4rem;
+      align-items: start;
+      margin-top: 2rem;
+    }
+
+    .card,
+    .topic-card {
+      background: white;
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .card { padding: 1.5rem; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .topic-card {
+      padding: 1.25rem;
+    }
+
+    .topic-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .topic-card p {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .red-link {
+      color: var(--red);
+      font-weight: 700;
+    }
+
     .gallery-controls {
       display: flex;
       flex-wrap: wrap;
@@ -456,11 +502,13 @@
 
     @media (max-width: 1080px) {
       .hero-grid,
+      .content-grid,
       .cta-box {
         grid-template-columns: 1fr;
       }
 
       .trust-grid,
+      .topic-grid,
       .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -474,6 +522,7 @@
       .hero-actions { flex-direction: column; }
       .hero-actions .btn { width: 100%; }
       .trust-grid,
+      .topic-grid,
       .gallery-grid {
         grid-template-columns: 1fr;
       }
@@ -485,6 +534,54 @@
       }
     }
   </style>
+
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["LocalBusiness", "HousePainter"],
+      "@id": "https://fmpaintokc.com/#localbusiness",
+      "name": "F&M Paint",
+      "url": "https://fmpaintokc.com/",
+      "logo": "https://fmpaintokc.com/img/logo-mark.png",
+      "image": "https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG",
+      "description": "F&M Paint provides premium exterior house painting, painted brick, siding painting, trim painting, fence staining, and exterior transformations in Edmond, Yukon, Oklahoma City, Bethany, The Village, Piedmont, and surrounding Oklahoma communities.",
+      "telephone": "+14056977828",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "3343 Washington Ave East",
+        "addressLocality": "Piedmont",
+        "addressRegion": "OK",
+        "postalCode": "73078",
+        "addressCountry": "US"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Edmond" },
+        { "@type": "City", "name": "Yukon" },
+        { "@type": "City", "name": "Oklahoma City" },
+        { "@type": "City", "name": "Bethany" },
+        { "@type": "City", "name": "The Village" },
+        { "@type": "City", "name": "Piedmont" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/fmpaintokc/",
+        "https://www.instagram.com/fmpaintokc/"
+      ]
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://fmpaintokc.com/gallery#collectionpage",
+      "url": "https://fmpaintokc.com/gallery",
+      "name": "Exterior Painting Gallery in Edmond, Yukon and Oklahoma City",
+      "description": "A gallery of exterior house painting projects, painted brick homes, siding painting, trim painting, door painting, staining, and exterior transformations by F&M Paint.",
+      "about": { "@id": "https://fmpaintokc.com/#localbusiness" }
+    }
+  ]
+}
+  </script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -532,13 +629,14 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <span class="eyebrow"><span class="eyebrow-dot"></span> Exterior Project Gallery</span>
-          <h1>See Our Exterior Painting Work</h1>
-          <p class="lead">Real exterior painting projects completed by F&amp;M Paint across Piedmont, Edmond, Yukon, Bethany, The Village, and the Oklahoma City metro.</p>
+          <h1>Exterior Painting Work in Edmond, Yukon &amp; OKC</h1>
+          <p class="lead">Browse real exterior house painting projects completed by F&amp;M Paint across Edmond, Yukon, Oklahoma City, Bethany, The Village, Piedmont, and surrounding Oklahoma communities.</p>
+          <p class="lead">Our gallery includes full exterior repaints, painted brick homes, siding painting, trim updates, garage door painting, color changes, and exterior transformations built around proper prep and clean finished results.</p>
           <div class="hero-actions">
             <a href="/exterior-quote" class="btn btn-primary">Get Your Exterior Quote</a>
             <a href="tel:+14056977828" class="btn btn-secondary">Call (405) 697-7828</a>
           </div>
-          <p class="hero-meta">Premium exterior transformations • Proper prep • Clean finished results</p>
+          <p class="hero-meta">Premium exterior transformations • Painted brick • Siding, trim, doors &amp; full repaints</p>
         </div>
 
         <div class="hero-card">
@@ -548,7 +646,7 @@
           </div>
           <div class="hero-badge">
             <strong>Real homes. Real transformations.</strong>
-            Browse recent exterior projects and see the type of finish, prep, and detail we bring to homes across the OKC metro.
+            Browse recent exterior projects and see the type of finish, prep, color placement, and detail we bring to homes across Edmond, Yukon, Oklahoma City, and nearby communities.
           </div>
         </div>
       </div>
@@ -568,7 +666,33 @@
       <div class="container">
         <span class="eyebrow"><span class="eyebrow-dot"></span> Recent exterior projects</span>
         <h2>Homes We’ve Painted</h2>
-        <p class="section-lead">Browse real exterior painting projects completed by F&amp;M Paint across the Oklahoma City metro. These photos show the type of prep, detail, and finished results we bring to every home.</p>
+        <p class="section-lead">Browse real exterior painting projects completed by F&amp;M Paint across Edmond, Yukon, Oklahoma City, Bethany, The Village, Piedmont, and surrounding areas. These photos show the type of prep, detail, color placement, and finished results we bring to every home.</p>
+
+        <div class="content-grid">
+          <div class="card">
+            <h3>Use This Gallery to Plan Your Exterior Painting Project</h3>
+            <p>
+              This gallery is designed to help homeowners see what is possible before starting an exterior painting project. Every home is different, but the goal stays the same: thoughtful preparation, clean execution, premium materials, and a finished result that makes the home feel complete.
+            </p>
+            <p>
+              Our exterior painting work includes projects in <a href="/edmond-painters" class="red-link">Edmond</a>, <a href="/yukon-painters" class="red-link">Yukon</a>, Oklahoma City, <a href="/bethany-painters" class="red-link">Bethany</a>, <a href="/the-village-painters" class="red-link">The Village</a>, <a href="/piedmont-painters" class="red-link">Piedmont</a>, and nearby communities. These photos show full exterior house painting projects, painted brick transformations, siding repaints, garage doors, trim details, shutters, fascia, soffits, and modern color updates.
+            </p>
+            <p>
+              We focus mainly on exterior painting because the prep, materials, and details matter. A strong result usually starts with washing, scraping loose paint, sanding where needed, caulking open gaps, spot priming bare surfaces, masking carefully, and applying the right Sherwin-Williams paint system for the home.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Planning Your Own Project?</h3>
+            <p>
+              The photos here can help you think through color placement, trim contrast, brick painting, siding updates, stained wood accents, and whether your home needs a simple refresh or a full exterior transformation.
+            </p>
+            <p>
+              You can also visit our <a href="/blog" class="red-link">exterior painting resources</a> to learn about paint products, repaint timelines, exterior painting costs, and Oklahoma weather considerations.
+            </p>
+            <a href="/exterior-quote" class="btn btn-primary">Start Your Exterior Quote</a>
+          </div>
+        </div>
 
         <div class="gallery-controls">
           <a href="/exterior-quote" class="btn btn-primary">Start Your Exterior Quote</a>
@@ -579,11 +703,58 @@
       </div>
     </section>
 
+
+    <section class="section alt">
+      <div class="container">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> Project types</span>
+        <h2>Exterior Painting Work We Feature</h2>
+        <p class="section-lead">
+          These are the types of residential exterior painting projects we most often help homeowners plan, price, and complete.
+        </p>
+
+        <div class="topic-grid">
+          <article class="topic-card">
+            <h3>Full Exterior Repaints</h3>
+            <p>Complete exterior house painting projects with siding, trim, fascia, soffits, garage doors, shutters, and accent details.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Painted Brick Homes</h3>
+            <p>Brick painting and masonry coating projects designed to create a cleaner, more modern exterior with the right prep and products.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Siding &amp; Trim Painting</h3>
+            <p>Exterior siding, wood trim, LP siding, fiber cement, fascia, soffits, and detail work that gives the home a finished look.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Garage Doors &amp; Accents</h3>
+            <p>Garage doors, shutters, front doors, accent trim, and color placements that help the full exterior feel intentional.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Exterior Color Changes</h3>
+            <p>Modern and timeless color updates for Oklahoma homes, including light siding, dark trim, warm neutrals, and bold accent doors.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Fence &amp; Wood Staining</h3>
+            <p>Fence staining, pergola staining, and wood finish work that helps the exterior property feel cohesive with the home.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Prep-Focused Projects</h3>
+            <p>Projects where washing, scraping, caulking, spot priming, and surface preparation are critical to the final result.</p>
+          </article>
+          <article class="topic-card">
+            <h3>Premium Exterior Updates</h3>
+            <p>Exterior transformations for homeowners who want guidance, clean work, clear communication, and quality materials.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section dark-section">
       <div class="container">
         <span class="eyebrow"><span class="eyebrow-dot"></span> Built for trust</span>
         <h2>Exterior Transformations Done With Care</h2>
-        <p class="section-lead">Every home is different, but the goal stays the same: thoughtful preparation, clean execution, and a finished result that makes your home feel complete.</p>
+        <p class="section-lead">Every home is different, but the goal stays the same: thoughtful preparation, clean execution, premium materials, and a finished result that makes your home feel complete.</p>
+        <p>F&amp;M Paint is a veteran and family-owned exterior painting company serving Edmond, Yukon, Oklahoma City, Bethany, The Village, Piedmont, and surrounding Oklahoma communities. We focus on premium exterior house painting, painted brick homes, siding painting, trim painting, fence staining, wood staining, and full exterior transformations for homeowners who value quality work.</p>
       </div>
     </section>
 
@@ -615,8 +786,8 @@
         <p>
         Serving Oklahoma in
         <a href="/edmond-painters" style="color: white; text-decoration: none;">Edmond</a>, 
-        <a href="/piedmont-painters" style="color: white; text-decoration: none;">Piedmont</a>, 
         <a href="/yukon-painters" style="color: white; text-decoration: none;">Yukon</a>, 
+        Oklahoma City, 
         <a href="/bethany-painters" style="color: white; text-decoration: none;">Bethany</a>, 
         <a href="/the-village-painters" style="color: white; text-decoration: none;">The Village</a>, 
         and surrounding areas
@@ -771,18 +942,77 @@
       'yukon-exterior-paint-full-home-75.JPEG'
     ];
 
-    function filenameToTitle(filename) {
-      const withoutExtension = filename.substring(0, filename.lastIndexOf('.'));
-      const cleaned = withoutExtension
-        .split('-')
-        .filter(part => isNaN(Number(part)))
-        .join(' ');
+    function imageDetails(filename) {
+      const base = filename.substring(0, filename.lastIndexOf('.')).toLowerCase();
+      const parts = base.split('-');
 
-      return cleaned
-        .split(' ')
-        .filter(Boolean)
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' ');
+      const cityMap = {
+        okc: 'Oklahoma City',
+        oklahoma: 'Oklahoma',
+        edmond: 'Edmond',
+        yukon: 'Yukon',
+        bethany: 'Bethany',
+        piedmont: 'Piedmont',
+        surrey: 'Surrey Hills'
+      };
+
+      let city = 'Oklahoma City Metro';
+      if (parts.includes('surrey') && parts.includes('hills')) {
+        city = 'Surrey Hills';
+      } else {
+        const firstCityKey = parts.find(part => cityMap[part]);
+        if (firstCityKey) city = cityMap[firstCityKey];
+      }
+
+      const hasBrick = parts.includes('brick');
+      const hasStucco = parts.includes('stucco');
+      const hasSiding = parts.includes('siding');
+      const hasGarage = parts.includes('garage');
+      const hasDoor = parts.includes('door');
+      const hasTrim = parts.includes('trim');
+      const hasWindow = parts.includes('window');
+      const hasPergola = parts.includes('pergola');
+      const isStain = parts.includes('stain');
+
+      let projectType = 'Exterior House Painting';
+      let description = `Exterior house painting project in ${city} with careful prep, clean lines, and a finished look by F&amp;M Paint.`;
+
+      if (hasBrick) {
+        projectType = 'Painted Brick Exterior';
+        description = `Painted brick exterior project in ${city} designed to refresh the home with a clean, cohesive finish.`;
+      } else if (hasStucco) {
+        projectType = 'Stucco Exterior Painting';
+        description = `Stucco exterior painting project in ${city} with a clean finish and updated curb appeal.`;
+      } else if (hasSiding) {
+        projectType = 'Siding Painting';
+        description = `Siding painting project in ${city} focused on a smooth, consistent exterior finish.`;
+      } else if (hasGarage) {
+        projectType = 'Garage Door Painting';
+        description = `Garage door painting project in ${city} that helped complete the exterior color scheme.`;
+      } else if (hasDoor && isStain) {
+        projectType = 'Exterior Door Staining';
+        description = `Exterior door staining project in ${city} with a warm wood finish and detailed prep.`;
+      } else if (hasDoor) {
+        projectType = 'Exterior Door Painting';
+        description = `Exterior door painting project in ${city} using accent color placement to elevate the home.`;
+      } else if (hasWindow || hasTrim) {
+        projectType = 'Exterior Trim Painting';
+        description = `Exterior trim painting project in ${city} with sharp details and a clean finished look.`;
+      } else if (hasPergola || isStain) {
+        projectType = 'Exterior Wood Staining';
+        description = `Exterior wood staining project in ${city} for a pergola, door, or outdoor wood feature.`;
+      } else if (parts.includes('partial')) {
+        projectType = 'Partial Exterior Painting';
+        description = `Partial exterior painting project in ${city} completed with focused prep and a clean finish.`;
+      } else if (parts.includes('full')) {
+        projectType = 'Full Exterior Repaint';
+        description = `Full exterior repaint in ${city} showing updated curb appeal and a polished final result.`;
+      }
+
+      const title = `${city} ${projectType}`;
+      const alt = `${projectType} project in ${city} Oklahoma completed by F&M Paint`;
+
+      return { title, description, alt };
     }
 
     projectImages.forEach(filename => {
@@ -790,19 +1020,19 @@
       article.className = 'gallery-item';
 
       const imgSrc = imageFolder + filename;
-      const title = filenameToTitle(filename);
+      const details = imageDetails(filename);
 
       article.innerHTML = `
-        <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" aria-label="Open ${title}">
+        <a href="${imgSrc}" target="_blank" rel="noopener noreferrer" aria-label="Open ${details.title}">
           <img
             src="${imgSrc}"
-            alt="${title} completed by F&amp;M Paint"
+            alt="${details.alt}"
             loading="lazy"
             onerror="this.closest('.gallery-item').remove();"
           >
           <div class="gallery-caption">
-            <strong>${title}</strong>
-            Exterior painting project completed by F&amp;M Paint.
+            <strong>${details.title}</strong>
+            ${details.description}
           </div>
         </a>
       `;
