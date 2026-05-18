@@ -120,6 +120,58 @@
     .sticky-cta .btn { width: 100%; }
     @media (max-width: 1080px) { .hero-grid, .cta-box { grid-template-columns: 1fr; } }
     @media (max-width: 800px) { body { padding-bottom: 108px; } .nav-links { display: none; } .hero { padding-top: 4rem; } .hero-actions { flex-direction: column; } .hero-actions .btn { width: 100%; } .summary-grid, .paint-tier { grid-template-columns: 1fr; } .paint-can img { height: 190px; } .author-box { grid-template-columns: 1fr; } .footer-row { flex-direction: column; align-items: flex-start; } .sticky-cta { display: block; } }
+  
+    .site-footer {
+      background: #090909;
+      color: rgba(255,255,255,0.72);
+      padding: 2rem 0 6rem;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .footer-left { flex: 1 1 760px; }
+    .footer-right { flex: 0 1 260px; }
+
+    .footer-left p,
+    .footer-right p {
+      margin: 0.2rem 0;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.95rem;
+    }
+
+    .footer-phone,
+    .footer-brand,
+    .footer-link { color: white; text-decoration: none; }
+
+    .footer-phone { font-weight: 700; }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .social-links a {
+      color: white;
+      opacity: 0.85;
+    }
+
+    .social-links a:hover { opacity: 1; }
+
+    @media (max-width: 760px) {
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
   </style>
 
   <!-- Meta Pixel Code -->
@@ -328,6 +380,7 @@
 
         <div class="comparison-box">
           <h3>Related exterior painting guides</h3>
+          <p><a href="/diy-vs-professional-exterior-painting">DIY vs professional exterior painting: which is right for your home?</a></p>
           <p><a href="/exterior-painting-cost-okc">How much does exterior painting cost in the OKC metro?</a></p>
           <p><a href="/how-often-repaint-house-exterior-oklahoma">How often should you repaint a house exterior in Oklahoma?</a></p>
           <p><a href="/best-exterior-paint-colors-oklahoma">Best exterior paint colors for Oklahoma homes</a></p>
@@ -364,27 +417,44 @@
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
     <div class="container footer-row">
       <div class="footer-left">
-        <p><strong style="color:white;">F&amp;M Paint — Veteran &amp; Family Owned</strong></p>
+        <p><strong class="footer-brand">F&amp;M Paint — Veteran &amp; Family Owned</strong></p>
         <p>
-        Serving Oklahoma in
-        <a href="/edmond-painters" style="color: white; text-decoration: none;">Edmond</a>,
-        <a href="/piedmont-painters" style="color: white; text-decoration: none;">Piedmont</a>,
-        <a href="/yukon-painters" style="color: white; text-decoration: none;">Yukon</a>,
-        <a href="/bethany-painters" style="color: white; text-decoration: none;">Bethany</a>,
-        <a href="/the-village-painters" style="color: white; text-decoration: none;">The Village</a>,
-        and surrounding areas
+          Serving Oklahoma in
+          <a href="/edmond-painters" class="footer-link">Edmond</a>,
+          <a href="/piedmont-painters" class="footer-link">Piedmont</a>,
+          <a href="/yukon-painters" class="footer-link">Yukon</a>,
+          <a href="/bethany-painters" class="footer-link">Bethany</a>,
+          <a href="/the-village-painters" class="footer-link">The Village</a>,
+          Oklahoma City, and surrounding areas
         </p>
+        <p>Business address: 3343 Washington Ave East, Piedmont, OK 73078</p>
         <p>Mon–Fri: 8:00 AM – 6:00 PM</p>
         <p>Sat: By appointment</p>
         <p>Sun: Closed</p>
+        <p>Email: <a href="mailto:hello@fmpaintokc.com" class="footer-link">hello@fmpaintokc.com</a></p>
+        <p>F&amp;M Paint is a veteran and family-owned house painting company serving Oklahoma City, Edmond, Piedmont, Yukon, Bethany, The Village, and nearby areas. We specialize in exterior house painting, brick painting, siding painting, fence staining, deck staining, and residential painting services designed to improve curb appeal and protect your home.</p>
+        <p>
+          <a href="/blog" class="footer-link">Exterior Painting Resources</a>
+          &nbsp;|&nbsp;
+          <a href="/gallery" class="footer-link">Project Gallery</a>
+          &nbsp;|&nbsp;
+          <a href="/exterior-quote" class="footer-link">Exterior Quote Request</a>
+          &nbsp;|&nbsp;
+          <a href="/good-better-best-exterior-paint-products" class="footer-link">Paint Product Guide</a>
+          &nbsp;|&nbsp;
+          <a href="/piedmont-exterior-painting-guide" class="footer-link">Piedmont Painting Guide</a>
+          &nbsp;|&nbsp;
+          <a href="/diy-vs-professional-exterior-painting" class="footer-link">DIY vs Pro Painter Guide</a>
+        </p>
       </div>
+
       <div class="footer-right">
         <p><a class="footer-phone" href="tel:+14056977828">(405) 697-7828</a></p>
-        <p><a href="mailto:fmpaintokc@gmail.com" style="color:white;">fmpaintokc@gmail.com</a></p>
+        <p><a href="mailto:hello@fmpaintokc.com" class="footer-link">hello@fmpaintokc.com</a></p>
+        <p><a href="/exterior-quote" class="footer-link">Request a quote online</a></p>
         <div class="social-links">
           <a href="https://www.facebook.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Facebook</a>
           <a href="https://www.instagram.com/fmpaintokc/" target="_blank" rel="noopener noreferrer">Instagram</a>
