@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,14 +14,14 @@
   <meta property="og:url" content="https://fmpaintokc.com/">
   <meta property="og:title" content="Exterior House Painters in Oklahoma City, Edmond & Piedmont | F&M Paint">
   <meta property="og:description" content="Premium exterior house painting, brick painting, siding painting, fence staining and residential painting services in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and nearby areas.">
-  <meta property="og:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
+  <meta property="og:image" content="https://fmpaintokc.com/img/hero-home.webp">
   <meta property="og:image:width" content="2048">
   <meta property="og:image:height" content="1536">
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Exterior House Painters in Oklahoma City, Edmond & Piedmont | F&M Paint">
   <meta name="twitter:description" content="Premium exterior house painting, brick painting, siding painting, fence staining and residential painting services in Oklahoma City, Edmond, Piedmont, Yukon, Bethany and nearby areas.">
-  <meta name="twitter:image" content="https://fmpaintokc.com/img/gallery/edmond-exterior-paint-full-home-24.JPEG">
+  <meta name="twitter:image" content="https://fmpaintokc.com/img/hero-home.webp">
 
   <link rel="canonical" href="https://fmpaintokc.com/">
   <link rel="preload" as="image" href="img/hero-home.webp" fetchpriority="high">
@@ -759,49 +760,44 @@
     }
 
     @media (max-width: 1080px) {
-      .hero-grid,
+      .hero {
+        min-height: auto;
+        padding: 3.2rem 0 3.4rem;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 1.65rem;
+        align-items: stretch;
+      }
+
+      .hero-copy {
+        padding: 0;
+        max-width: 740px;
+      }
+
+      h1 {
+        max-width: 15ch;
+      }
+
+      .hero-card {
+        width: 100%;
+        max-width: 860px;
+      }
+
+      .hero-image {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
       .split-grid,
       .owners-grid,
       .cta-box,
-  
-    .resources-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-
-    .resource-card {
-      background: white;
-      border: 1px solid var(--border-dark);
-      border-radius: 22px;
-      padding: 1.35rem;
-      box-shadow: var(--shadow);
-    }
-
-    .resource-card h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .resource-card p {
-      color: var(--muted);
-      font-size: 0.96rem;
-      margin-bottom: 1rem;
-    }
-
-    .resource-card a {
-      color: var(--red);
-      font-weight: 800;
-    }
-
-    .pricing-box {
+      .pricing-box {
         grid-template-columns: 1fr;
       }
-
-      h1 { max-width: 13ch; }
-
-      .hero-image { height: auto; min-height: 0; aspect-ratio: 16 / 10; }
 
       .trust-grid,
       .services-grid,
@@ -812,32 +808,124 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
     @media (max-width: 760px) {
-      body { padding-bottom: 108px; }
-      .section { padding: 3.6rem 0; }
+      body {
+        padding-bottom: 104px;
+      }
 
-      .nav-links { display: none; }
+      .container {
+        width: min(calc(100% - 1.35rem), var(--container));
+      }
 
-      .hero { min-height: auto; padding: 2.75rem 0 3rem; display: block; }
+      .section {
+        padding: 3.25rem 0;
+      }
+
+      .site-header {
+        position: sticky;
+      }
+
+      .nav {
+        min-height: 66px;
+      }
+
+      .brand {
+        gap: 0.7rem;
+      }
+
+      .brand-mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+      }
+
+      .brand-name {
+        font-size: 1.06rem;
+      }
+
+      .brand-sub {
+        font-size: 0.62rem;
+        letter-spacing: 0.11em;
+        white-space: nowrap;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        display: block;
+        min-height: auto;
+        padding: 1.85rem 0 2.35rem;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.35rem;
+      }
+
+      .hero-copy {
+        padding: 0;
+      }
+
+      .eyebrow {
+        font-size: 0.72rem;
+        letter-spacing: 0.11em;
+      }
 
       h1 {
-        font-size: clamp(2.45rem, 10vw, 3.25rem);
-        max-width: 13ch;
+        font-size: clamp(2.32rem, 11.2vw, 3.15rem);
+        line-height: 0.97;
+        max-width: 12.5ch;
+        margin-bottom: 0.85rem;
       }
 
-      .lead { max-width: 100%; }
+      .hero-rule {
+        width: 82px;
+        margin: 0.85rem 0 0;
+      }
+
+      .lead {
+        font-size: 1rem;
+        line-height: 1.58;
+        max-width: 100%;
+        margin-top: 1rem;
+      }
+
+      .hero-card {
+        border-radius: 22px;
+        width: 100%;
+      }
 
       .hero-image {
+        width: 100%;
+        height: auto;
         aspect-ratio: 4 / 3;
-        min-height: 0;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 22px;
       }
 
-      .hero-actions { flex-direction: column; }
+      .hero-actions {
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1.25rem;
+      }
 
-      .hero-actions .btn { width: 100%; }
+      .hero-actions .btn {
+        width: 100%;
+        min-width: 0;
+      }
+
+      .hero-actions .hero-secondary {
+        display: none;
+      }
 
       .hero-trust {
         grid-template-columns: repeat(2, 1fr);
@@ -845,9 +933,14 @@
         margin-top: 2rem;
       }
 
-      .hero-trust-item:nth-child(odd) { border-left: 0; padding-left: 0; }
+      .hero-trust-item:nth-child(odd) {
+        border-left: 0;
+        padding-left: 0;
+      }
 
-      .hero-trust-item { text-align: left; }
+      .hero-trust-item {
+        text-align: left;
+      }
 
       .trust-grid,
       .gallery-grid,
@@ -861,11 +954,25 @@
         grid-template-columns: 1fr;
       }
 
-      .owners-grid { grid-template-columns: 1fr; }
+      .owners-grid,
+      .split-grid,
+      .cta-box,
+      .pricing-box {
+        grid-template-columns: 1fr;
+      }
 
-      .hero-badge { max-width: calc(100% - 2rem); }
+      .hero-badge {
+        max-width: calc(100% - 2rem);
+      }
 
-      .sticky-cta { display: block; }
+      .cta-box {
+        border-radius: 24px;
+        padding: 1.35rem;
+      }
+
+      .sticky-cta {
+        display: block;
+      }
 
       .footer-row {
         flex-direction: column;
